@@ -1,0 +1,132 @@
+.nav-tabs li a {
+    color: #ccc;
+}
+.nav-tabs li a.active {
+    color: #333;
+    font-size: 20px;
+    line-height: 20px;
+}
+.nav-tabs li {
+    font-size: 20px;
+    line-height: 20px;
+    margin-right: 20px;
+}
+.nav-tabs li a:hover {
+    text-decoration: unset;
+}
+.tab-content {
+    float: left;
+    width: 100%;
+}
+.form-group {
+    float: left;
+    width: 100%;
+}
+.form-group label {
+    float: left;
+    width: 100%;
+    padding: 0px 10px;
+    font-size: 14px;
+    color: #999999;
+    margin-bottom: 0px;
+}
+.sign_up_btn {
+    width: 80%;
+    padding: 15px 10px;
+    text-align: center;
+    color: #fff;
+    background: #624DAA;
+    font-size: 24px;
+    line-height: 18px;
+    border: 2px solid #624DAA;
+    font-weight: bold;
+    display: block;
+    margin: 0px auto;
+    border-radius: 4px;
+    cursor: pointer;
+
+}
+.sign_up_btn:hover {
+    color: #624DAA;
+    background: #fff;
+    border: 2px solid #624DAA;
+}
+.sign_up_btn:focus {
+    outline: none;
+
+}
+.input_control {
+    float: left;
+    width: 100%;
+    border: unset;
+    border-bottom: 1px solid #ccc;
+    font-size: 22px;
+    line-height: 16px;
+    padding: 10px;
+    margin-bottom: 0px;
+}
+.pay_info {
+    font-size: 12px;
+    line-height: 18px;
+    float: left;
+    width: 100%;
+    text-align: center;
+}
+.pay_info span {
+    cursor: pointer;
+    color: #F7A400;
+    text-decoration: underline;
+}
+.payment_col {
+    width: 90%;
+    display: block;
+    margin: 0px auto;
+}
+.payment_method {
+
+}
+.payment_method li {
+    float: left;
+    width: 33.3%;
+}
+.payment_method li span {
+    float: left;
+    width: 100%;
+    text-align: center;
+    margin-top: 5px;
+    font-size: 16px;
+}
+.icon {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    margin: 0px auto;
+    display: block;
+}
+.fab {
+    font-size: 25px;
+    line-height: 70px;
+    margin-left: 23px;
+}
+.pay_text {
+    font-size: 18px;
+    line-height: 18px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+.left_block {
+    position: absolute;
+    left: 109px;
+    top: 33%;
+}
+.title {
+    color: #fff;
+    font-size: 30px;
+}
+.pc-logo {
+    float: left;
+    width: 100%;
+}
+.pc-logo img {
+    width: 100px;
+}
