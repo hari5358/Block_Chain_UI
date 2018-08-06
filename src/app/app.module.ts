@@ -6,18 +6,31 @@ import { SignUpComponent } from './components/sign-up/sign-up.component';
 import {RouterModule, Routes} from '@angular/router';
 import { SignInComponent } from './components/sign-in/sign-in.component';
 import {AppRoutingModule} from './app-routing/app-routing.module';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { BasicInfoComponent } from './components/basic-info/basic-info.component';
+import { EducationalDetailsComponent } from './components/educational-details/educational-details.component';
+import { ProfessionalDetailsComponent } from './components/professional-details/professional-details.component';
+import { AddSkillComponent } from './components/add-skill/add-skill.component';
+import { ProfileListComponent } from './components/profile/profile-list/profile-list.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     SignUpComponent,
-    SignInComponent
+    SignInComponent,
+    BasicInfoComponent,
+    EducationalDetailsComponent,
+    ProfessionalDetailsComponent,
+    AddSkillComponent,
+    ProfileListComponent
   ],
   imports: [
     BrowserModule,
     RouterModule,
-      AppRoutingModule
+      AppRoutingModule,
+      FormsModule,
+      ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

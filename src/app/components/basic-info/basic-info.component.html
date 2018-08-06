@@ -1,0 +1,112 @@
+<div class="full-width">
+  <div class="full-width">
+    <div class="logo">
+      <img src="assets/images/pc-logo-login.svg">
+    </div>
+  </div>
+  <div class="login_container">
+    <div class="back_btn"><img src="assets/images/Back.svg"></div>
+    <div class="chain_steps">
+        <ul class="step_menu">
+            <li>1</li>
+            <li class="bg">2</li>
+            <li class="bg">3</li>
+            <li class="bg">4</li>
+        </ul>
+    </div>
+    <div class="full-width">
+      <form class="login_form" basicInfoForm="ngForm">
+        <div class="row">
+          <div class="full-width">
+              <div class="col-md-6 col-sm-6 col-xl-6 float-left">
+                  <p class="full-width">Basic Inforamation</p>
+              </div>
+              <div class="col-md-6 col-sm-6 col-xl-6 float-left">
+                <p class="full-width text-right">Skip</p>
+              </div>
+          </div>
+          <div class="col-md-12 col-sm-12 col-xl-12">
+              <div class="col-md-6 col-sm-6 col-xl-6 float-left p-0 pr-2">
+                  <div class="form-group">
+                      <label>First Name</label>
+                      <input class="form-control" name="firstname" id="firstname" placeholder="Arivoli">
+                  </div>
+              </div>
+              <div class="col-md-6 col-sm-6 col-xl-6 float-left p-0 pl-2">
+                <div class="form-group">
+                  <label>Last Name</label>
+                  <input class="form-control" name="lastname" id="lastname" placeholder="Tamilarasan">
+                </div>
+              </div>
+          </div>
+          <div class="col-md-12 col-sm-12 col-xl-12 mb-4">
+            <div class="col-md-6 col-sm-6 col-xl-6 float-left p-0 pr-2">
+              <div class="form-group">
+                <label>Date Of Birth</label>
+                <div class="full-width">
+                    <div class="col-md-3 col-sm-3 col-xl-3 p-0 pr-1 float-left">
+                          <div class="form-group">
+                              <select class="form-control">
+                                  <option>Day</option>
+                              </select>
+                          </div>
+                    </div>
+                    <div class="col-md-5 col-sm-5 col-xl-5 float-left p-0 pr-1 pl-1 float-left">
+                      <div class="form-group">
+                        <select class="form-control">
+                            <option>Month</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col-md-4 col-sm-4 col-xl-4 float-left p-0 pl-1 float-right">
+                      <div class="form-group">
+                        <select class="form-control">
+                            <option>Year</option>
+                        </select>
+                      </div>
+                    </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-sm-6 col-xl-6 float-left p-0 pl-2">
+              <div class="form-group">
+                <label>Gender</label>
+                <div class="full-width">
+                    <div class="col-md-4 col-sm-4 col-xl-4 float-left p-0 pr-1">
+                      <div class="gender_select active">Male</div>
+                    </div>
+                    <div class="col-md-4 col-sm-4 col-xl-4 float-left p-0 pr-1 pl-1">
+                      <div class="gender_select">Female</div>
+                    </div>
+                    <div class="col-md-4 col-sm-4 col-xl-4 float-left p-0 pr-1 pl-1">
+                      <div class="gender_select">Transgender</div>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-12 col-xl-12 col-sm-12">
+              <div class="form-group">
+                    <label>Address</label>
+                    <textarea class="form-control"></textarea>
+              </div>
+          </div>
+          <div class="col-md-12 col-sm-12 col-xl-12">
+                <span>Document Upload <i class="fa fa-exclamation-circle"></i></span>
+                <div class="full-width">
+                    <div class="upload_img">
+                            <img src="assets/images/signup-bg.svg">
+                    </div>
+                    <div class="upload_img">
+                        <img src="assets/images/signup-bg.svg">
+                    </div>
+                </div>
+          </div>
+        </div>
+        <div class="full-width mt-3 mb-4">
+          <button class="sign_in_btn next_btn" (click)="goToNext()" type="submit" [disabled]="!BasicInfoForm.invalid">Next</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

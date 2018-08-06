@@ -8,6 +8,9 @@ import {Router} from '@angular/router';
 })
 export class SignUpComponent implements OnInit {
 
+  profileurl = null;
+  email = null;
+
   constructor(private router: Router) {
     this.router = router;
 

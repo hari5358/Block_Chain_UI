@@ -7,19 +7,28 @@
           <div class="">
               <ul class="nav nav-tabs">
                   <li class="active"><a data-toggle="tab" class="active" href="#signup">Sign Up</a></li>
-                  <li><a data-toggle="tab" href="#signin">Sign In</a></li>
+                  <li><a data-toggle="tab" href="#signin" (click)="reDirectToLogin()">Sign In</a></li>
               </ul>
               <div class="tab-content mt-3">
                   <div id="signup" class="tab-pane fade in active show">
-                      <form>
+                      <form signupform="ngForm">
                           <div class="full-width">
                                 <div class="form-group">
                                     <label>Profile Url</label>
-                                    <input class="input_control" placeholder="Heptagon" id="profile-url" name="profile-url">
+                                    <input class="input_control" placeholder="Heptagon" profileInput="ngModel" id="profileurl" required name="profileurl" [(ngModel)]="profileurl" #profileInput >
+                                    <div *ngIf="profileurl.invalid && (profileurl.dirty || profileurl.touched)"
+                                         class="alert alert-danger">
+                                        <div *ngIf="profileurl.errors.required">
+                                            Profile url is required.
+                                        </div>
+                                        <div *ngIf="profileurl.errors.minlength">
+                                            Name must be at least 4 characters long.
+                                        </div>
+                                    </div>
                                 </div>
                                 <div class="form-group">
                                     <label>Mail Id</label>
-                                    <input class="input_control" placeholder="admin@heptagon.in" id="email" name="email">
+                                    <input class="input_control" placeholder="admin@heptagon.in" id="email" name="email" required [(ngModel)]="email" emailInput="ngModel" #emailInput>
                                 </div>
                           </div>
                           <div class="full-width">
@@ -42,12 +51,9 @@
                                 </div>
 
                                 <p class="pay_info mt-2">A gas token of 0.0001 ETH / 0.00000 BTC /FIAT 1$ <br>will be charged. <span>Why?</span></p>
-                                <button class="sign_up_btn" (click)="reDirectToLogin()">Sign Up</button>
+                                <button class="sign_up_btn" (click)="reDirectToLogin()" type="submit" [disabled]="!signupform.valid">Sign Up</button>
                           </div>
                       </form>
-                  </div>
-                  <div id="signin" class="tab-pane fade">
-
                   </div>
               </div>
           </div>

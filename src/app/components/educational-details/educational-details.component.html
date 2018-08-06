@@ -1,0 +1,129 @@
+<div class="full-width">
+  <div class="full-width">
+    <div class="logo">
+      <img src="assets/images/pc-logo-login.svg">
+    </div>
+  </div>
+  <div class="login_container">
+    <div class="back_btn"><img src="assets/images/Back.svg"></div>
+    <div class="chain_steps">
+      <ul class="step_menu">
+        <li class="completed"><i class="fa fa-check"></i></li>
+        <li>2</li>
+        <li class="bg">3</li>
+        <li class="bg">4</li>
+      </ul>
+    </div>
+    <div class="full-width">
+      <form class="login_form" educationalForm="ngForm">
+        <div class="row">
+          <div class="col-md-12 col-sm-12 col-xl-12">
+            <div class="col-md-6 col-sm-6 col-xl-6 float-left p-0">
+              <p class="full-width page_title">Educational Details</p>
+            </div>
+            <div class="col-md-6 col-sm-6 col-xl-6 float-left p-0">
+              <button class="add_new"><i class="fa fa-plus"></i> Add New</button>
+            </div>
+          </div>
+          <div class="col-md-12 col-sm-12 col-xl-12">
+              <p class="sub_title">10th Grade</p>
+              <div class="form-group">
+                <label>Institution Name</label>
+                <input class="form-control" name="instname" id="instname" placeholder="Siv Matriculation Higher Secondary School, Sirummugai">
+              </div>
+              <div class="col-md-6 col-sm-6 col-xl-6 float-left p-0 pr-2">
+                <div class="form-group">
+                  <label>Passed Out Year</label>
+                  <select class="form-control">
+                    <option>2019</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-md-6 col-sm-6 col-xl-6 float-left p-0 pl-2">
+                <div class="form-group">
+                  <label>Marks Secured</label>
+                  <input class="form-control" name="" id="" placeholder="85%">
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="full-width">Document Upload <i class="fa fa-exclamation-circle"></i></label>
+                <div class="upload_img">
+                  <img src="assets/images/signup-bg.svg">
+                </div>
+                <div class="upload_img">
+                  <img src="assets/images/signup-bg.svg">
+                </div>
+              </div>
+          </div>
+          <div class="col-md-12 col-sm-12 col-xl-12 mt-3">
+            <p class="sub_title">12th Grade</p>
+            <div class="form-group">
+              <label>Institution Name</label>
+              <input class="form-control" name="instname" id="instname" placeholder="Siv Matriculation Higher Secondary School, Sirummugai">
+            </div>
+            <div class="col-md-6 col-sm-6 col-xl-6 float-left p-0 pr-2">
+              <div class="form-group">
+                <label>Passed Out Year</label>
+                <select class="form-control">
+                  <option>2019</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-md-6 col-sm-6 col-xl-6 float-left p-0 pl-2">
+              <div class="form-group">
+                <label>Marks Secured</label>
+                <input class="form-control" name="" id="" placeholder="85%">
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="full-width">Document Upload <i class="fa fa-exclamation-circle"></i></label>
+              <div class="upload_img">
+                <img src="assets/images/signup-bg.svg">
+              </div>
+              <div class="upload_img">
+                <img src="assets/images/signup-bg.svg">
+              </div>
+            </div>
+          </div>
+          <div class="col-md-12 col-sm-12 col-xl-12 mt-3">
+            <p class="sub_title">Under Graduation</p>
+            <div class="form-group">
+              <label>Institution Name</label>
+              <input class="form-control" name="instname" id="instname" placeholder="Siv Matriculation Higher Secondary School, Sirummugai">
+            </div>
+            <div class="form-group">
+              <label>Field of Study</label>
+              <input class="form-control" name="instname" id="instname" placeholder="Bachelor of Technology (B.Tech), Information Technology">
+            </div>
+            <div class="col-md-6 col-sm-6 col-xl-6 float-left p-0 pr-2">
+              <div class="form-group">
+                <label>From Year</label>
+                <select class="form-control">
+                  <option>2011</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-md-6 col-sm-6 col-xl-6 float-left p-0 pl-2">
+              <div class="form-group">
+                <label>To Year</label>
+                <input class="form-control" name="" id="" placeholder="2018">
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="full-width">Document Upload <i class="fa fa-exclamation-circle"></i></label>
+              <div class="upload_img">
+                <img src="assets/images/signup-bg.svg">
+              </div>
+              <div class="upload_img">
+                <img src="assets/images/signup-bg.svg">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="full-width mt-3 mb-4">
+          <button class="sign_in_btn next_btn" (click)="goToNext()" type="submit" [disabled]="!BasicInfoForm.invalid">Next</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
