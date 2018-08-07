@@ -15,7 +15,8 @@ export class AddSkillComponent implements OnInit {
   ngOnInit() {
   }
 
-  backRedirect() {
+    backRedirect() {
+    this.router.navigate(['/profile']);
   }
 
 }

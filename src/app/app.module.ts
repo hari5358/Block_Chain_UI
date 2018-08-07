@@ -12,6 +12,7 @@ import { EducationalDetailsComponent } from './components/educational-details/ed
 import { ProfessionalDetailsComponent } from './components/professional-details/professional-details.component';
 import { AddSkillComponent } from './components/add-skill/add-skill.component';
 import { ProfileListComponent } from './components/profile/profile-list/profile-list.component';
+import { WalletComponent } from './components/wallet/wallet.component';
 
 
 @NgModule({
@@ -23,14 +24,15 @@ import { ProfileListComponent } from './components/profile/profile-list/profile-
     EducationalDetailsComponent,
     ProfessionalDetailsComponent,
     AddSkillComponent,
-    ProfileListComponent
+    ProfileListComponent,
+    WalletComponent
   ],
   imports: [
     BrowserModule,
     RouterModule,
-      AppRoutingModule,
-      FormsModule,
-      ReactiveFormsModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

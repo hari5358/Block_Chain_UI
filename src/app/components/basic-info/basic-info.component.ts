@@ -16,7 +16,11 @@ export class BasicInfoComponent implements OnInit {
     }
 
     goToNext() {
-        this.router.navigate(['/educational-details'])
+        this.router.navigate(['/educational-details']);
+    }
+
+    goToPrevious() {
+        this.router.navigate(['/sign-in']);
     }
 
 }

@@ -12,6 +12,9 @@ body,html {
   left: 0;
   right: 0;
 }
+.no-padding {
+    padding: 0px !important;
+}
 
 .container_custom {
   display: block;
@@ -71,14 +74,20 @@ ul {
   list-style: none;
 }
 /* login component css */
-
+.main_container {
+    float: left;
+    background: #F8F8F8;
+    width: 100%;
+    padding: 10px 30px 20px 30px;
+}
 .login_container {
   float: left;
   width: 100%;
-  border-right: 30px solid #F8F8F8;
-  border-left: 30px solid #F8F8F8;
-  border-bottom: 20px solid #F8F8F8;
-  border-top: 10px solid #F8F8F8;
+  background: #ffffff;
+  /*border-right: 30px solid #F8F8F8;*/
+  /*border-left: 30px solid #F8F8F8;*/
+  /*border-bottom: 20px solid #F8F8F8;*/
+  /*border-top: 10px solid #F8F8F8;*/
     position: relative;
 }
 .login_form {
@@ -171,8 +180,8 @@ ul {
 }
 .upload_img {
   float: left;
-  width: 180px;
-  margin-right: 30px;
+  width: 100px;
+  margin-right: 20px;
   margin-top: 10px;
 }
 .upload_img img {
@@ -301,6 +310,7 @@ button:focus {
     position: absolute;
     top: 15px;
     left: 80px;
+    cursor: pointer;
 }
 .back_btn img {
     width: 30px;
@@ -310,6 +320,23 @@ button:focus {
     border: 2px solid green !important;
     padding-left: 5px !important;
     color: green;
+}
+.upload_file {
+    float: left;
+    width: 100px;
+    border: 2px solid #F8F8F8;
+    height: 100px;
+    margin-top: 10px;
+    border-radius: 4px;
+    padding: 20px 0px;
+    cursor: pointer;
+}
+.upload_file span {
+    text-align: center;
+    font-size: 16px;
+    line-height: 24px;
+    width: 100%;
+    float: left;
 }
 /*profile list css */
 .profile_list_block {
@@ -341,6 +368,365 @@ button:focus {
     color: #624DAA;
     border-bottom: 2px solid #624DAA;
 }
+.notification_icon {
+    width: 25px;
+    margin-right: 20px;
+}
+.notification_icon img {
+    width: 100%;
+}
+.profile_list_row {
+    float: left;
+    width: 100%;
+    padding: 20px 70px;
+}
+.profile_list_col {
+    background: #fff;
+    border-radius: 4px;
+    padding: 15px;
+    position: relative;
+    height: 230px;
+}
+.profile_social_menu {
+
+}
+.profile_social_menu li {
+    float: left;
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+.profile_thumb {
+    float: left;
+    width: 120px;
+    height: 120px;
+    margin-right: 20px;
+}
+.profile_thumb img {
+    float: left;
+    width: 100%;
+}
+.profile_info {
+    float: left;
+    width: calc(100% - 140px);
+    margin-top: 15px;
+}
+.profile_name {
+    float: left;
+    width: 100%;
+    color: #333333;
+    font-size: 14pt;
+    line-height: 14px;
+    margin-bottom: 15px;
+    font-weight: 500;
+}
+.profile_text {
+    float: left;
+    width: 100%;
+    color: #999999;
+    font-size: 13pt;
+    line-height: 14px;
+    margin-bottom: 15px;
+    font-weight: normal;
+}
+.socila_col {
+
+}
+.profile_social_menu {
+
+}
+.profile_social_menu li {
+
+}
+.profile_edit {
+    position: absolute;
+    top: 2px;
+    right: 23px;
+}
+.profile_edit img {
+    width: 20px;
+    cursor: pointer;
+}
+.pub-key-info {
+    float: left;
+    width: 80%;
+    border: 1px solid #F8F8F8;
+    padding: 10px 10px 12px 10px;
+    font-size: 13pt;
+    line-height: 13px;
+    border-radius: 2px;
+}
+.qr-col {
+    width: 15%;
+}
+.pub-key-col {
+    width: 42%;
+}
+.profile_info_col {
+    width: 41%;
+    margin-right: 15px;
+}
+.pct-col {
+    float: left;
+    width: 50%;
+    margin-top: 20px;
+}
+.pct_title {
+    color: #333333;
+    font-size: 14px;
+    line-height: 14px;
+
+}
+.pct_title small {
+    color: #999999;
+    font-size: 10px;
+}
+.pct-info {
+    width: 100%;
+    margin-top: 10px;
+}
+.summary {
+    font-size: 13px;
+    line-height: 13px;
+    text-decoration: underline;
+    color: #999999;
+}
+.qr-icon {
+    width: 100px;
+    margin: 20px auto 0px;
+    display: block;
+}
+.qr-icon img {
+    float: left;
+    width: 100%;
+}
+.qr-info {
+    font-size: 14pt;
+    line-height: 15pt;
+    color: #999999;
+    margin-top: 10px;
+}
+.profile_dropdown {
+    float: right;
+}
+.profile_dropdown img {
+    width: 35px;
+}
+.profile_section {
+    float: left;
+    width: 100%;
+    margin-bottom: 20px;
+}
+.edu_section {
+    float: left;
+    width: 100%;
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+.edu_col {
+    float: left;
+    width: 100%;
+}
+.edu_col .full-width {
+    /*padding: 0px 15px;*/
+}
+.edu_title {
+    font-size: 20pt;
+    line-height: 18pt;
+    color: #333333;
+    float: left;
+    width: 100%;
+    font-weight: bold;
+}
+.grade_title {
+    float: left;
+    font-size: 16pt;
+    line-height: 16pt;
+    color: #333333;
+    font-weight: 600;
+}
+.verify_grade {
+    color: #ffffff;
+    border-radius: 14px;
+    background: #4AB847;
+    border: #4AB847;
+    font-size: 14px;
+    line-height: 17px;
+    padding: 3px 10px;
+    margin-left: 15px;
+}
+.inpregress {
+    background: #F7A400;
+}
+.thumb_nail {
+    float: left;
+    width: 90px;
+}
+.thumb_nail img {
+    float: left;
+    width: 100%;
+}
+.edu_info_col {
+    float: left;
+    width: 45%;
+}
+.edu_info {
+    float: left;
+    width: calc(100% - 90px);
+    padding-left: 25px;
+}
+.percentage_col {
+    float: left;
+    width: 23%;
+    text-align: center;
+}
+.percentage_row {
+    border-right: 2px solid #F8F8F8;
+    border-left: 2px solid #F8F8F8;
+    float: left;
+    width: 100%;
+    height: 80px;
+
+}
+.documents_col {
+    float: right;
+    width: 32%;
+    padding-left: 55px;
+}
+.docs_list {
+    float: left;
+    width: 100%;
+}
+.percentage {
+    font-size: 24pt;
+    line-height: 24px;
+    color: #F7A400;
+    font-weight: normal;
+}
+.marks_info {
+
+}
+.doc_action {
+    float: left;
+    width: 20%;
+}
+.image_list {
+    float: left;
+    width: 80%;
+}
+.image_list img {
+    float: left;
+    width: 80px;
+    margin-right: 10px;
+}
+.doc_action img {
+    width: 20px;
+    margin: 13px auto;
+    display: block;
+    cursor: pointer;
+}
+.documents_col .full-width {
+    top: -41px;
+}
+.designation {
+    margin-bottom: 10px;
+}
+.pro_info_col {
+    width: 68%;
+}
+.edit_skills {
+    width: 20px;
+    position: relative;
+    top: -4px;
+    cursor: pointer;
+}
+.skill_name_col {
+    float: left;
+    width: 35%;
+    margin-top: 10px;
+}
+.skill_name {
+    float: left;
+    width: 100%;
+    font-size: 24px;
+    line-height: 24px;
+    color: #333333;
+    font-weight: 500;
+    text-decoration: underline;
+}
+.skill_status_col {
+    float: left;
+    width: 30%;
+    margin-top: 15px;
+}
+.skill_rating_col {
+    float: left;
+    width: 9%;
+    margin-top: 10px;
+}
+.skill_profile {
+    float: right;
+    width: 26%;
+}
+.status_img {
+    float: left;
+}
+.status_img img {
+    float: left;
+    width: 60px;
+    margin-right: 10px;
+}
+.rated_profile {
+    float: left;
+}
+.rated_profile img {
+    float: left;
+    width: 50px;
+    margin-right: 15px;
+}
+.modal-dialog {
+    max-width: 1000px !important;
+}
+.delete_btn {
+    text-align: center;
+    color: #E74B24;
+    font-size: 20px;
+    line-height: 18px;
+    background: #ffffff;
+    border: 2px solid #E74B24;
+    font-weight: bold;
+    display: block;
+    border-radius: 4px;
+    cursor: pointer;
+    padding: 15px;
+    width: 200px;
+}
+.delete_btn:hover {
+    color: #ffffff;
+    border: 2px solid #E74B24;
+    background: #E74B24;
+}
+.save_btn {
+    text-align: center;
+    color: #624DAA;
+    font-size: 20px;
+    line-height: 18px;
+    background: #ffffff;
+    border: 2px solid #624DAA;
+    font-weight: bold;
+    display: block;
+    border-radius: 4px;
+    cursor: pointer;
+    padding: 15px;
+    width: 200px;
+}
+.save_btn:hover {
+    color: #ffffff;
+    border: 2px solid #624DAA;
+    background: #624DAA;
+}
 /*profile list list css end */
 @media (max-width: 767px) {
   .sign_up_box {
@@ -349,4 +735,57 @@ button:focus {
     top: unset;
     padding: 10px;
   }
+    .profile_list_row {
+        padding: 10px;
+    }
+    .profile_info_col, .pub-key-col, .qr-col {
+        width: 100%;
+        margin: 0px 0px 10px 0px;
+    }
+   .edu_info_col, .percentage_col, .documents_col {
+       width: 100%;
+   }
+   .documents_col {
+       padding-left: 0px;
+   }
+   .documents_col .position-absolute {
+       position: unset !important;
+   }
+   .edu_section {
+       padding: 10px;
+   }
+    .thumb_nail {
+        margin: 0px auto;
+        float: unset;
+    }
+    .edu_info {
+        width: 100%;
+        padding-left: 0px;
+        text-align: center;
+    }
+    .percentage_row {
+        border: unset;
+        margin: 15px 0px;
+    }
+    .skill_name_col, .skill_status_col, .skill_rating_col, .skill_profile {
+        width: 100%;
+    }
+    .login_form {
+        width: 100%;
+        padding: 0px;
+    }
+    .main_container {
+        padding: 10px;
+    }
+    .login_container {
+        padding: 10px;
+    }
+    .step_menu {
+        width: 60%;
+    }
+    .back_btn {
+        top: 25px;
+        left: 14px;
+    }
+
 }

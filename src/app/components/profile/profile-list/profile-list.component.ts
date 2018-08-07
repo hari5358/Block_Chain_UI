@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-profile-list',
@@ -7,9 +8,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProfileListComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) {
+    this.router = router;
+  }
 
   ngOnInit() {
   }
+  addNewEduDetails() {
+    this.router.navigate(['/educational-details']);
+  }
+  addNewProDetails() {
+      this.router.navigate(['/professional-details']);
+  }
+
+  addNewSkills() {
+      this.router.navigate(['/add-skills']);
+  }
+
+    goToWallet() {
+
+    }
 
 }

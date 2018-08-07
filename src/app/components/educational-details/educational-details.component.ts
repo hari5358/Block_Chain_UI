@@ -19,4 +19,8 @@ export class EducationalDetailsComponent implements OnInit {
         this.router.navigate(['/professional-details'])
     }
 
+    goToPrevious() {
+        this.router.navigate(['/basic-info']);
+    }
+
 }

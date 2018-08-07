@@ -4,49 +4,51 @@
       <img src="assets/images/pc-logo-login.svg">
     </div>
   </div>
-  <div class="login_container">
-    <div class="back_btn" (click)="backRedirect()"><img src="assets/images/Back.svg"></div>
-    <div class="chain_steps">
-      <ul class="step_menu">
-        <li class="completed"><i class="fa fa-check"></i></li>
-        <li class="completed"><i class="fa fa-check"></i></li>
-        <li class="completed"><i class="fa fa-check"></i></li>
-        <li class="bg">4</li>
-      </ul>
-    </div>
-    <div class="full-width">
-      <form class="login_form" adsSkillForm="ngForm">
-        <div class="row">
-          <div class="col-md-12 col-sm-12 col-xl-12">
-            <div class="col-md-6 col-sm-6 col-xl-6 float-left p-0">
-              <p class="full-width page_title">Add Skills</p>
-              <p>You can add maximum of 5 skills</p>
-            </div>
-            <div class="form-group">
-              <input class="form-control" name="title" id="title" placeholder="Seach your skills (eg: Designer)">
-            </div>
-            <div class="search_results">
-              <button class="search_results_btn"><i class="fa fa-check"></i> Graphic Designer</button>
-              <button class="search_results_btn"><i class="fa fa-check"></i> User interface Designer</button>
-              <button class="search_results_btn"><i class="fa fa-check"></i> User Experience Designer</button>
-              <button class="search_results_btn"><i class="fa fa-check"></i> illustrator</button>
-              <button class="search_results_btn"><i class="fa fa-check"></i> Affinity</button>
-            </div>
-            <div class="suggest_col full-width mt-4">
-                <p class="full-width">Suggested Skill based on your Professional Details</p>
-                <button class="suggested_skill_btn"><i class="fa fa-plus"></i> Interaction Design</button>
-              <button class="suggested_skill_btn"><i class="fa fa-plus"></i> User Centered Design</button>
-              <button class="suggested_skill_btn"><i class="fa fa-plus"></i> Logo Designer</button>
-              <button class="suggested_skill_btn"><i class="fa fa-plus"></i> Photoshop</button>
-              <button class="suggested_skill_btn"><i class="fa fa-plus"></i> Illustration</button>
-              <button class="suggested_skill_btn"><i class="fa fa-plus"></i> Team Management</button>
+  <div class="main_container">
+    <div class="login_container">
+      <div class="back_btn" (click)="backRedirect()"><img src="assets/images/Back.svg"></div>
+      <div class="chain_steps">
+        <ul class="step_menu">
+          <li class="completed"><i class="fa fa-check"></i></li>
+          <li class="completed"><i class="fa fa-check"></i></li>
+          <li class="completed"><i class="fa fa-check"></i></li>
+          <li class="bg">4</li>
+        </ul>
+      </div>
+      <div class="full-width">
+        <form class="login_form" adsSkillForm="ngForm">
+          <div class="row">
+            <div class="col-md-12 col-sm-12 col-xl-12">
+              <div class="col-md-6 col-sm-6 col-xl-6 float-left p-0">
+                <p class="full-width page_title">Add Skills</p>
+                <p>You can add maximum of 5 skills</p>
+              </div>
+              <div class="form-group">
+                <input class="form-control" name="title" id="title" placeholder="Seach your skills (eg: Designer)">
+              </div>
+              <div class="search_results">
+                <button class="search_results_btn"><i class="fa fa-check"></i> Graphic Designer</button>
+                <button class="search_results_btn"><i class="fa fa-check"></i> User interface Designer</button>
+                <button class="search_results_btn"><i class="fa fa-check"></i> User Experience Designer</button>
+                <button class="search_results_btn"><i class="fa fa-check"></i> illustrator</button>
+                <button class="search_results_btn"><i class="fa fa-check"></i> Affinity</button>
+              </div>
+              <div class="suggest_col full-width mt-4">
+                  <p class="full-width">Suggested Skill based on your Professional Details</p>
+                  <button class="suggested_skill_btn"><i class="fa fa-plus"></i> Interaction Design</button>
+                <button class="suggested_skill_btn"><i class="fa fa-plus"></i> User Centered Design</button>
+                <button class="suggested_skill_btn"><i class="fa fa-plus"></i> Logo Designer</button>
+                <button class="suggested_skill_btn"><i class="fa fa-plus"></i> Photoshop</button>
+                <button class="suggested_skill_btn"><i class="fa fa-plus"></i> Illustration</button>
+                <button class="suggested_skill_btn"><i class="fa fa-plus"></i> Team Management</button>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="full-width mt-3 mb-4">
-          <button class="sign_in_btn next_btn" type="submit" [disabled]="!BasicInfoForm.invalid">Next <i class="fas fa-chevron-right"></i></button>
-        </div>
-      </form>
+          <div class="full-width mt-3 mb-4">
+            <button class="sign_in_btn next_btn" type="submit" [disabled]="!BasicInfoForm.invalid">Next <i class="fas fa-chevron-right"></i></button>
+          </div>
+        </form>
+      </div>
     </div>
   </div>
 </div>
