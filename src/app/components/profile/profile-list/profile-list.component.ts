@@ -26,7 +26,7 @@ export class ProfileListComponent implements OnInit {
   }
 
     goToWallet() {
-
+      this.router.navigate(['/wallet'])
     }
 
 }

@@ -1,0 +1,11 @@
+select {
+    border: unset;
+    margin-top: 10px;
+    background: #F8F8F8;
+}
+select:focus {
+    outline: none;
+}
+.pct_block input {
+    background: #F8F8F8;
+}

@@ -13,6 +13,7 @@ import { ProfessionalDetailsComponent } from './components/professional-details/
 import { AddSkillComponent } from './components/add-skill/add-skill.component';
 import { ProfileListComponent } from './components/profile/profile-list/profile-list.component';
 import { WalletComponent } from './components/wallet/wallet.component';
+import { OrganizationProfileComponent } from './components/organization-profile/organization-profile.component';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { WalletComponent } from './components/wallet/wallet.component';
     ProfessionalDetailsComponent,
     AddSkillComponent,
     ProfileListComponent,
-    WalletComponent
+    WalletComponent,
+    OrganizationProfileComponent
   ],
   imports: [
     BrowserModule,

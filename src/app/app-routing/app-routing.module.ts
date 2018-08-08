@@ -8,6 +8,8 @@ import {EducationalDetailsComponent} from '../components/educational-details/edu
 import {ProfessionalDetailsComponent} from '../components/professional-details/professional-details.component';
 import {AddSkillComponent} from '../components/add-skill/add-skill.component';
 import {ProfileListComponent} from '../components/profile/profile-list/profile-list.component';
+import {WalletComponent} from '../components/wallet/wallet.component';
+import {OrganizationProfileComponent} from '../components/organization-profile/organization-profile.component';
 
 const appRoutes: Routes = [
     { path: '', redirectTo: '/sign-up', pathMatch: 'full' },
@@ -18,6 +20,8 @@ const appRoutes: Routes = [
     {path: 'professional-details', component: ProfessionalDetailsComponent},
     {path: 'add-skills', component: AddSkillComponent},
     {path: 'profile', component: ProfileListComponent},
+    {path: 'wallet', component: WalletComponent},
+    {path: 'organization-profile', component: OrganizationProfileComponent},
 ];
 
 
