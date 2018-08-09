@@ -1,0 +1,26 @@
+.modal-body .verification_col {
+    width: 100%;
+    text-align: left;
+    text-transform: capitalize;
+}
+.modal-body .emp_name {
+    font-size: 24px;
+    line-height: 24px;
+}
+.modal-body small {
+
+}
+.modal-dialog {
+    width: 600px !important;
+}
+.modal-body .verification_field {
+    margin-top: 15px;
+}
+.modal-content {
+    position: relative;
+}
+button.close_btn {
+    position: absolute;
+    right: 20px;
+    top: 10px;
+}

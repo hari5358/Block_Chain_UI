@@ -1,0 +1,23 @@
+.form-group label {
+    font-size: 14px;
+    line-height: 14px;
+    float: left;
+    width: 100%;
+}
+.form-group {
+    float: left;
+    width: 100%;
+}
+.button_row {
+    float: left;
+    width: 100%;
+    position: relative;
+}
+.back_btn {
+    position: absolute;
+    left: 62px;
+    cursor: pointer;
+}
+.sign_in_btn {
+    width: 40%;
+}

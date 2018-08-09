@@ -14,6 +14,10 @@ import { AddSkillComponent } from './components/add-skill/add-skill.component';
 import { ProfileListComponent } from './components/profile/profile-list/profile-list.component';
 import { WalletComponent } from './components/wallet/wallet.component';
 import { OrganizationProfileComponent } from './components/organization-profile/organization-profile.component';
+import { VerificationRequestComponent } from './components/verification-request/verification-request.component';
+import { PaymentComponent } from './components/payment/payment.component';
+import { SkillHiringComponent } from './components/skill-hiring/skill-hiring.component';
+import { PaymentSuccessComponent } from './components/payment-success/payment-success.component';
 
 
 @NgModule({
@@ -27,7 +31,11 @@ import { OrganizationProfileComponent } from './components/organization-profile/
     AddSkillComponent,
     ProfileListComponent,
     WalletComponent,
-    OrganizationProfileComponent
+    OrganizationProfileComponent,
+    VerificationRequestComponent,
+    PaymentComponent,
+    SkillHiringComponent,
+    PaymentSuccessComponent
   ],
   imports: [
     BrowserModule,

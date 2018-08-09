@@ -606,6 +606,27 @@ button:focus {
     color: #F7A400;
     font-weight: normal;
 }
+.view_docs {
+    float: left;
+    width: 80%;
+    box-shadow: 1px 0px 0px 2px #F8F8F8;
+    padding: 14px;
+    position: relative;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.view_docs p {
+    font-size: 18px;
+    line-height: 24px;
+    color: #333333;
+    float: left;
+    width: calc(100% - 50px);
+}
+.view_docs img {
+    float: left;
+    width: 40px;
+    margin-right: 10px;
+}
 .marks_info {
 
 }
@@ -1014,6 +1035,7 @@ button:focus {
     border-bottom: 2px solid #F8F8F8;
 }
 /* wallet page css end */
+
 /*organization profile css */
 .org_profile_block {
     float: left;
@@ -1022,7 +1044,7 @@ button:focus {
 .org_banner {
     float: left;
     width: 100%;
-    height: 300px;
+    /*height: 300px;*/
     position: relative;
 }
 .org_banner img {
@@ -1130,8 +1152,11 @@ button:focus {
     margin-top: 5px;
 
 }
-.jon_icon {
+.job_icon {
     color: #999999;
+}
+.job_icon img {
+    width: 20px;
 }
 .verification_block {
 
@@ -1206,10 +1231,215 @@ button:focus {
     float: left;
     width: 100%;
     padding: 15px 0px;
-    margin-bottom: 10px;
     border-bottom: 2px solid #F8F8F8;
+    cursor: pointer;
+}
+.verify_col {
+    float: left;
+    width: 44%;
+    text-align: center;
+}
+.verify_col:first-child {
+    border-right: 1px solid #F8F8F8;
+}
+.verify_check {
+    color: #4AB847;
+    font-size: 26px;
+    cursor: pointer;
+}
+.verify_info {
+    font-size: 10px !important;
+    float: left;
+    width: 100%;
+    line-height: 10px;
+    color: #333333;
+    font-weight: normal;
+    margin-top: 4px;
+}
+.verify_close {
+    color: #E74B24;
+    font-size: 26px;
+    cursor: pointer;
+}
+.search_row {
+    float: left;
+    width: 100%;
+    border: 2px solid #F8F8F8;
+    border-radius: 30px;
+    height: 50px;
+    padding: 10px 10px;
+}
+.search_btn {
+    float: left;
+    padding: 4px 8px;
+    font-size: 14px;
+    line-height: 14px;
+    background: #F8F8F8;
+    border-radius: 20px;
+    border: 2px solid #F8F8F8;
+    margin-right: 20px;
+    width: 140px;
+    position: relative;
+    text-align: left;
+    cursor: pointer;
+}
+.search_row span {
+    position: absolute;
+    right: 10px;
+}
+.search_input {
+    float: left;
+    width: 400px;
+    margin-left: 30px;
+}
+.search_input input {
+    border: unset;
+    font-size: 16px;
+    line-height: 16px;
+    color: #999999;
+    float: right;
+    width: 92%;
+}
+.search_icon {
+    float: left;
+    width: 20px;
+    color: #F8F8F8;
+}
+.org_logo {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background: #ffffff;
+    left: 92px;
+    bottom: -74px;
+    padding: 20px;
+    box-shadow: 1px 0px 0px 2px #F8F8F8;
+    border-radius: 4px;
+}
+.org_logo img {
+
 }
 /*organization profile end */
+/*payment page css */
+.payment_list_menu {
+    float: left;
+    width: 100%;
+}
+.payment_list_menu li {
+    float: left;
+    width: 20%;
+    text-align: center;
+    padding: 20px 0px;
+    cursor: pointer;
+}
+.payment_list_menu li:hover {
+    border-bottom: 5px solid #624DAA;
+}
+.payment_list_menu li.active {
+    border-bottom: 5px solid #624DAA;
+}
+.payment_list_menu li span {
+    width: 100%;
+    float: left;
+    text-align: center;
+    font-size: 14px;
+    line-height: 14px;
+    color: #999999;
+    margin-top: 4px;
+}
+.payment_list_menu li:first-child {
+    /*text-align: left;*/
+}
+.payment_list_menu li img {
+    width: 70px;
+}
+.payment_left {
+    float: left;
+    width: 70%;
+    padding: 30px 0px;
+}
+.payment_right {
+    float: right;
+    width: 30%;
+    background: #624DAA;
+    padding: 30px 50px;
+}
+.payment_form {
+    float: left;
+    width: 100%;
+}
+.payment_header {
+    padding: 0px 50px;
+    float: left;
+    width: 100%;
+    border-bottom: 2px solid #F8F8F8;
+}
+.payment_body {
+    float: left;
+    width: 100%;
+    padding: 30px 50px;
+}
+.payment_input {
+    float: left;
+    width: 100%;
+    outline: 0;
+    border-width: 0 0 2px;
+    border-color: #F8F8F8;
+}
+.payment_input:focus {
+    outline: 0;
+    border-width: 0 0 2px;
+    border-color: #F8F8F8;
+    border-bottom: 2px solid #F8F8F8;
+}
+.wallet_icon {
+    float: left;
+    width: 100%;
+    text-align: center;
+    color: #ffffff;
+}
+.wallet_icon img {
+    width: 60px;
+}
+.wallet_icon p {
+    color: #ffffff;
+    font-size: 18px;
+    line-height: 32px;
+    margin-top: 20px;
+    font-weight: 600;
+
+}
+.total_amount {
+    float: left;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    margin-top: 120px;
+}
+.total_amount p {
+    font-size: 16px;
+    line-height: 16px;
+
+}
+.total_amount span {
+    float: left;
+    width: 100%;
+    font-size: 36px;
+    line-height: 30px;
+}
+.success_icon {
+    width: 150px;
+}
+.success_container {
+    width: 500px;
+    display: block;
+    margin: 0px auto;
+    padding: 120px 0px;
+}
+.success_container p {
+    color: #999999;
+}
+/* payment page css end */
 @media (max-width: 767px) {
   .sign_up_box {
     width: 100%;
