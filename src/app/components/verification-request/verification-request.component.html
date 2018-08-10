@@ -1,19 +1,19 @@
 <div class="full-width">
   <div class="full-width">
     <div class="col-md-4 col-sm-4 col-xl-4 float-left">
-      <div class="logo">
+      <div class="logo mobile_logo">
         <img src="assets/images/pc-logo-login.svg">
       </div>
     </div>
     <div class="col-md-4 col-sm-4 col-xl-4 float-left">
       <div class="full-width">
-        <ul class="profile_menu">
+        <ul class="profile_menu mobile_menu">
           <li routerLink="/organization-profile">
-            <img src="assets/images/verification_request_icon.svg">
+            <img src="assets/images/profile-icon-active.svg">
             Profile
           </li>
           <li class="active">
-            <img src="assets/images/verification_request_icon.svg">
+            <img src="assets/images/verification-request-active.svg">
             Verification Request
           </li>
           <li routerLink="/wallet">
@@ -24,18 +24,20 @@
       </div>
     </div>
     <div class="col-md-4 col-sm-4 col-xl-4 float-right mt-3">
-      <div class="dropdown float-right">
-        <div class="profile_dropdown dropdown-toggle">
-          <img src="assets/images/profile-logo.svg">
+      <div class="mobile_dropdown">
+        <div class="dropdown float-right">
+          <div class="profile_dropdown dropdown-toggle">
+            <img src="assets/images/hep-top-right-logo.svg">
+          </div>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="#">Action</a>
+            <a class="dropdown-item" href="#">Another action</a>
+            <a class="dropdown-item" href="#">Something else here</a>
+          </div>
         </div>
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
-          <a class="dropdown-item" href="#">Something else here</a>
+        <div class="float-right notification_icon">
+          <img src="assets/images/Notification.svg">
         </div>
-      </div>
-      <div class="float-right notification_icon">
-        <img src="assets/images/Notification.svg">
       </div>
     </div>
   </div>
@@ -45,22 +47,22 @@
         <div class="jobs_block">
           <div class="full-width p-3">
             <div class="full-width mb-2">
-              <h4 class="float-left">Heptagon Technologies Pvt Ltd</h4>
+              <h4 class="float-left cmp_title">Heptagon Technologies Pvt Ltd</h4>
               <div class="float-right">
                 <ul class="nav nav-tabs wallet_list">
                   <li class="nav-item">
                     <a class="nav-link active" data-toggle="tab" href="#queue">
-                      <span class="mr-4"><i class="fas fa-book-open"></i> Queue</span>
+                      <span><img class="verifi_icon" src="assets/images/Queue.svg"> Queue</span>
                     </a>
                   </li>
                   <li>
                     <a class="nav-link" data-toggle="tab" href="#validated">
-                      <span class="active"><i class="fas fa-coins"></i> Validated</span>
+                      <span class="active"><img class="verifi_icon" src="assets/images/Validated.svg"> Validated</span>
                     </a>
                   </li>
                   <li>
                     <a class="nav-link" data-toggle="tab" href="#rejected">
-                      <span class="active"><i class="fas fa-coins"></i> Rejected</span>
+                      <span class="active"><img class="verifi_icon" src="assets/images/Rejected.svg"> Rejected</span>
                     </a>
                   </li>
                 </ul>

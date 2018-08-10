@@ -1,15 +1,15 @@
 <div class="full-width">
   <div class="full-width">
     <div class="col-md-4 col-sm-4 col-xl-4 float-left">
-      <div class="logo">
+      <div class="logo mobile_logo">
         <img src="assets/images/pc-logo-login.svg">
       </div>
     </div>
     <div class="col-md-4 col-sm-4 col-xl-4 float-left">
       <div class="full-width">
-        <ul class="profile_menu">
+        <ul class="profile_menu mobile_menu">
           <li class="active">
-            <img src="assets/images/verification_request_icon.svg">
+            <img src="assets/images/profile-icon-active.svg">
             Profile
           </li>
           <li routerLink="/verification-request">
@@ -24,24 +24,27 @@
       </div>
     </div>
     <div class="col-md-4 col-sm-4 col-xl-4 float-right mt-3">
-      <div class="dropdown float-right">
-        <div class="profile_dropdown dropdown-toggle">
-          <img src="assets/images/profile-logo.svg">
+        <div class="mobile_dropdown">
+            <div class="dropdown float-right">
+                <div class="profile_dropdown dropdown-toggle">
+                    <img src="assets/images/hep-top-right-logo.svg">
+                </div>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" href="#">Action</a>
+                    <a class="dropdown-item" href="#">Another action</a>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                </div>
+            </div>
+            <div class="float-right notification_icon">
+                <img src="assets/images/Notification.svg">
+            </div>
         </div>
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
-          <a class="dropdown-item" href="#">Something else here</a>
-        </div>
-      </div>
-      <div class="float-right notification_icon">
-        <img src="assets/images/Notification.svg">
-      </div>
     </div>
   </div>
   <div class="org_profile_block">
       <div class="org_banner">
         <img src="assets/images/banner_bg.svg">
+        <div class="banner_gradient"><img src="assets/images/banner-gradient.svg"></div>
         <div class="org_overview">
             <div class="org_info">
               <div class="org_name">
@@ -71,7 +74,7 @@
               <div class="about_us_block">
                   <div class="about_left"></div>
                   <div class="about_right">
-                    <div class="col-md-8 col-sm-12 col-xl-8 float-left no-padding">
+                    <div class="col-md-8 col-sm-12 col-xl-8 float-left no-padding mobile_margin">
                       <h5>About us</h5>
                       <p>Heptagon is a Digital Transforamation Consultancy that offers enterprises and SMEs technology solutions across the Digital Transforamation journey such as Digitalisation and Digital Transforamation through its products. Read More</p>
                       <div class="socila_col">
@@ -97,7 +100,10 @@
               </div>
               <div class="full-width jobs_block">
                   <div class="col-md-12 col-sm-12 col-xl-12">
-                      <h4 class="full-width">Posted Jobs</h4>
+                      <div class="full-width post_title_col">
+                          <h4 class="float-left">Posted Jobs</h4>
+                          <p class="float-right view_all">View all 20 Jobs</p>
+                      </div>
                       <div class="col-md-3 col-sm-3 col-xl-3 float-left shadow">
                           <span class="full-width job_icon"><img src="assets/images/job-icon.svg"></span>
                           <h6 class="text-uppercase job_title">data scientist / qauntitative analyst</h6>
@@ -159,7 +165,7 @@
               <div class="jobs_block">
                   <div class="full-width p-3">
                     <h4 class="float-left">Verification Request</h4>
-                    <p class="float-right">View all 20 requests</p>
+                    <p class="float-right view_all">View all 20 requests</p>
                   </div>
                   <div class="full-width">
                       <div class="verification_header">

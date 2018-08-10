@@ -353,7 +353,7 @@ button:focus {
     width: auto;
     padding: 20px 0px;
     margin-right: 25px;
-    font-size: 15pt;
+    font-size: 13pt;
     line-height: 15px;
     color: #999999;
     cursor: pointer;
@@ -394,7 +394,7 @@ button:focus {
     float: left;
     width: 30px;
     height: 30px;
-    margin-right: 10px;
+    margin-right: 25px;
 }
 .profile_thumb {
     float: left;
@@ -759,6 +759,9 @@ button:focus {
 .wallet_list {
     float: right;
 }
+.verifi_icon {
+    width: 30px;
+}
 .wallet_list span {
     font-size: 18px;
     line-height: 18px;
@@ -937,7 +940,7 @@ button:focus {
 }
 .nav-tabs .nav-link:hover {
     border: unset;
-    color: #624DAA;
+    /*color: #624DAA;*/
 }
 .nav-tabs .nav-link {
     border: unset;
@@ -1058,6 +1061,12 @@ button:focus {
     right: 0px;
     width: 80%;
 }
+.banner_gradient {
+    position: absolute;
+    left: 0px;
+    width: 100%;
+    bottom: 0px;
+}
 .org_name {
     float: left;
     font-size: 30px;
@@ -1148,9 +1157,16 @@ button:focus {
     font-size: 18px;
     line-height: 18px;
     margin-bottom: 5px;
-    color: #999999;
+    color: #333333;
     margin-top: 5px;
-
+}
+.post_title_col {
+    padding: 0px 35px 0px 20px;
+}
+.view_all {
+    color: #4F90F4;
+    text-decoration: underline;
+    cursor: pointer;
 }
 .job_icon {
     color: #999999;
@@ -1205,15 +1221,16 @@ button:focus {
 .verification_field {
     font-size: 16px;
     line-height: 16px;
-    color: #999999;
+    color: #333333;
     float: left;
     width: 100%;
     margin-top: 20px;
+    text-transform: capitalize;
 }
 .emp_name {
     font-size: 14px;
     line-height: 16px;
-    color: #999999;
+    color: #333333;
     float: left;
     width: 100%;
     text-transform: capitalize;
@@ -1498,6 +1515,103 @@ button:focus {
     .back_btn {
         top: 25px;
         left: 14px;
+    }
+    .mobile_menu {
+        width: 50%;
+        margin: 0px auto;
+        display: block;
+        float: none;
+    }
+    .mobile_dropdown {
+        width: 28%;
+        margin: 0px auto;
+        display: block;
+    }
+    .mobile_logo img {
+        margin: 0px auto;
+        float: unset;
+        display: block;
+    }
+    .wallet_block .p-4 {
+        padding: 10px !important;
+    }
+    .wallet_list .nav-link {
+        padding: 5px;
+    }
+    .transaction_details, .tockens_gained, .pass_status {
+        width: 100%;
+    }
+    .redeem_col {
+        padding: 10px;
+    }
+    .deposit_left {
+        width: 100%;
+        height: auto;
+    }
+    .deposit_right {
+        width: 100%;
+    }
+    .rup_block {
+        width: 100%;
+    }
+    .pct_block {width: 100%}
+    .mob_trans_iocn {display: none}
+    .wallet_balance_block {width: 100%;padding: 10px;margin-top: 40px}
+    .balance_info .float-right p {
+        font-size: 16px;
+        margin-top: 4px;
+    }
+    .balance {font-size: 18px}
+    .deposit_btn {
+        bottom: -7%;
+        left: 18%;
+    }
+    .org_logo {
+        left: 17px;
+        bottom: -33px;
+        height: 65px;
+        width: 65px;
+    }
+    .jobs_block .col-xl-3 {
+        max-width: unset !important;
+        margin: unset !important;
+    }
+    .cmp_title {
+        font-size: 22px;
+    }
+    .jobs_block .p-3 {
+        padding: 10px !important;
+    }
+    .search_row {
+        border: unset;
+        height: unset;
+    }
+    .search_btn {
+        width: 100%;
+        margin-right: 0px;
+        margin-bottom: 10px;
+    }
+    .search_input {width: 100%;margin-left: 0px}
+    .search_row .add_new {
+        width: 100%;
+    }
+    .verification_col {width: 100%}
+    .verification_col span {margin-bottom: 10px}
+    .verification_col .verification_field {
+        text-align: left;
+        padding-left: 24px;
+    }
+    .skills_block {padding: 10px}
+    .skills_block .search_results_btn {
+        margin-bottom: 10px;
+    }
+    .about_left {display: none}
+    .about_us_block {
+        padding: 50px 10px 10px 10px;
+    }
+    .about_right {width: 100%}
+    .mobile_margin {
+        margin: 20px 0px;
     }
 
 }
