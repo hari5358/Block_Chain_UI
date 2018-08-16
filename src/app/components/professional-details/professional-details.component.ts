@@ -10,6 +10,9 @@ import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 export class ProfessionalDetailsComponent implements OnInit {
     professionalForm: FormGroup;
     submitted = false;
+    selectedFiles: File;
+    url = 'assets/images/';
+    selectedFile: File;
 
     constructor(private router: Router, private formBuilder: FormBuilder) {
         this.router = router;
@@ -45,6 +48,25 @@ export class ProfessionalDetailsComponent implements OnInit {
         }
         this.router.navigate(['/profile']);
         // alert('SUCCESS!! :-)')
+    }
+
+
+    onFileChanged(event) {
+        this.selectedFile = event.target.files[0];
+    }
+
+
+    onSelectFile(event) {
+        this.selectedFiles = event.target.files;
+        if (event.target.files && event.target.files[0]) {
+            const reader = new FileReader();
+
+            reader.readAsDataURL(event.target.files[0]); // read file as data url
+
+            reader.onload = (event) => { // called once readAsDataURL is completed
+                this.url = event.target.result;
+            }
+        }
     }
 
 }

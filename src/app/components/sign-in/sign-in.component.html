@@ -17,10 +17,10 @@
                           </div>
                           <div class="col-md-8 col-xl-8 col-sm-8 float-left">
                               <div class="form-group">
-                                  <input class="form-control" required formControlName="pubkey" [ngClass]="{ 'is-invalid': submitted && f.pubkey.errors }" placeholder="f324323dsfsdfdsdsfdsfds">
-                                  <div *ngIf="submitted && f.pubkey.errors" class="invalid-feedback">
-                                      <div *ngIf="f.pubkey.errors.required">Public Key is required</div>
-                                  </div>
+                                  <input class="form-control" required formControlName="pubkey" placeholder="f324323dsfsdfdsdsfdsfds">
+                                  <!--<div *ngIf="submitted && f.pubkey.errors" class="invalid-feedback">-->
+                                      <!--<div *ngIf="f.pubkey.errors.required">Public Key is required</div>-->
+                                  <!--</div>-->
                               </div>
                           </div>
                           <div class="col-md-1 col-sm-1 col-xl-1 float-left">
@@ -35,10 +35,10 @@
                           </div>
                           <div class="col-md-8 col-xl-8 col-sm-8 float-left">
                             <div class="form-group">
-                              <input class="form-control" required formControlName="privatekey" [ngClass]="{ 'is-invalid': submitted && f.privatekey.errors }" placeholder="Sent to your mail id">
-                            <div *ngIf="submitted && f.privatekey.errors" class="invalid-feedback">
-                                <div *ngIf="f.privatekey.errors.required"> Private key is required</div>
-                            </div>
+                              <input class="form-control" required formControlName="privatekey" placeholder="Sent to your mail id">
+                            <!--<div *ngIf="submitted && f.privatekey.errors" class="invalid-feedback">-->
+                                <!--<div *ngIf="f.privatekey.errors.required"> Private key is required</div>-->
+                            <!--</div>-->
                             </div>
                           </div>
                           <div class="col-md-1 col-sm-1 col-xl-1 float-left">
@@ -46,16 +46,16 @@
                           </div>
                         </div>
                         <div class="col-md-12 col-sm-12 col-xl-12">
-                          <div class="col-md-5 col-sm-5 col-xl-5 float-left">
+                          <div class="col-md-3 col-sm-12 col-xl-3 float-left">
                             <div class="form-group">
-                              <label class="mt-2 mb-0">Google Athenticator Code</label>
+                              <label class="mt-2 mb-0">Password</label>
                             </div>
                           </div>
-                          <div class="col-md-6 col-xl-6 col-sm-6 float-left">
+                          <div class="col-md-8 col-xl-8 col-sm-12 float-left">
                             <div class="form-group">
-                              <input class="form-control" formControlName="athenticatecode" required value="08645" [ngClass]="{ 'is-invalid': submitted && f.athenticatecode.errors }">
-                                <div *ngIf="submitted && f.athenticatecode.errors" class="invalid-feedback">
-                                    <div *ngIf="f.athenticatecode.errors.required"> Google Athenticator Code is required</div>
+                              <input class="form-control" formControlName="password" required placeholder="Password" [ngClass]="{ 'is-invalid': submitted && f.password.errors }">
+                                <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                                    <div *ngIf="f.password.errors.required"> password is required</div>
                                 </div>
                             </div>
                           </div>
@@ -63,20 +63,23 @@
                           </div>
                         </div>
                       </div>
-                      <div class="full-width">
-                          <div class="">
-                              <p class="text-center">Fill Profile with</p>
-                              <div class="social_media">
-                                  <ul class="social_menu">
-                                      <li><img src="assets/images/fb.svg"></li>
-                                    <li><img src="assets/images/linkedin.svg"></li>
-                                    <li><img src="assets/images/g+.svg"></li>
-                                  </ul>
-                              </div>
-                          </div>
-                      </div>
+                      <!--<div class="full-width">-->
+                          <!--<div class="">-->
+                              <!--<p class="text-center">Fill Profile with</p>-->
+                              <!--<div class="social_media">-->
+                                  <!--<ul class="social_menu">-->
+                                      <!--<li><img src="assets/images/fb.svg"></li>-->
+                                    <!--<li><img src="assets/images/linkedin.svg"></li>-->
+                                    <!--<li><img src="assets/images/g+.svg"></li>-->
+                                  <!--</ul>-->
+                              <!--</div>-->
+                          <!--</div>-->
+                      <!--</div>-->
                       <div class="full-width mt-3 mb-4">
-                          <button class="sign_in_btn" type="submit">Sign In</button>
+                          <div class="">
+                              <button class="float-left sign_in_btn">Download</button>
+                              <button class="sign_in_btn float-right" type="submit">Sign In</button>
+                          </div>
                       </div>
                 </form>
             </div>

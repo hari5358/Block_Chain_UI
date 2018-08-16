@@ -87,7 +87,8 @@
                 <div class="upload_img">
                   <img src="assets/images/edu-docu1.svg">
                 </div>
-                <div class="upload_file">
+                <input type="file" #fileInput style="display: none" (change)="onFileChanged($event)">
+                <div class="upload_file" (click)="fileInput.click()">
                   <span><i class="fas fa-paperclip"></i></span>
                   <span>Attach</span>
                 </div>

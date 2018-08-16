@@ -16,14 +16,11 @@
             </ul>
         </div>
         <div class="full-width">
-          <form class="login_form" [formGroup]="basicInfoForm" (ngSubmit)="onSubmit()">
+          <form class="login_form" [formGroup]="basicInfoForm">
             <div class="row">
               <div class="full-width">
-                  <div class="col-md-6 col-sm-6 col-xl-6 float-left">
+                  <div class="col-md-6 col-sm-12 col-xl-6 float-left">
                       <p class="full-width">Basic Inforamation</p>
-                  </div>
-                  <div class="col-md-6 col-sm-6 col-xl-6 float-left">
-                    <p class="full-width text-right">Skip</p>
                   </div>
               </div>
               <div class="col-md-12 col-sm-12 col-xl-12">
@@ -107,13 +104,20 @@
               <div class="col-md-12 col-sm-12 col-xl-12">
                     <span>Document Upload <i class="fa fa-exclamation-circle"></i></span>
                     <div class="full-width">
+                        <!--<div class="upload_img">-->
+                            <!--<img src="assets/images/edu-docu.svg">-->
+                        <!--</div>-->
+                        <!--<div class="upload_img">-->
+                            <!--<img src="assets/images/edu-docu1.svg">-->
+                        <!--</div>-->
                         <div class="upload_img">
-                            <img src="assets/images/edu-docu.svg">
+                            <img [src]="url">
                         </div>
-                        <div class="upload_img">
-                            <img src="assets/images/edu-docu1.svg">
-                        </div>
-                        <div class="upload_file">
+                        <!--<angular-file-uploader class="upload_file"-->
+                                <!--[config]="afuConfig">-->
+                        <!--</angular-file-uploader>-->
+                        <input type="file" accept="image/png" #fileInput multiple style="display: none" (change)="onSelectFile($event)">
+                        <div class="upload_file" (click)="fileInput.click($event)">
                             <span><i class="fas fa-paperclip"></i></span>
                             <span>Attach</span>
                         </div>

@@ -24,9 +24,7 @@ export class SignInComponent implements OnInit {
 
   ngOnInit() {
       this.signinForm = this.formBuilder.group({
-          pubkey: ['', Validators.required],
-          privatekey: ['', Validators.required],
-          athenticatecode: ['', Validators.required],
+          password: ['', Validators.required],
       });
   }
 

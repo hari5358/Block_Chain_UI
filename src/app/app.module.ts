@@ -18,6 +18,9 @@ import { VerificationRequestComponent } from './components/verification-request/
 import { PaymentComponent } from './components/payment/payment.component';
 import { SkillHiringComponent } from './components/skill-hiring/skill-hiring.component';
 import { PaymentSuccessComponent } from './components/payment-success/payment-success.component';
+import {AngularFileUploaderModule} from 'angular-file-uploader';
+import {UploadFileService} from './components/upload-file.service';
+import {HttpClientModule} from '@angular/common/http';
 
 
 @NgModule({
@@ -43,8 +46,10 @@ import { PaymentSuccessComponent } from './components/payment-success/payment-su
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
+    AngularFileUploaderModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [UploadFileService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

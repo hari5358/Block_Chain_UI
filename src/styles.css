@@ -116,8 +116,8 @@ ul {
   margin: 0px auto;
 }
 .sign_in_btn {
-  width: 55%;
-  padding: 15px 10px;
+  /*width: 55%;*/
+  padding: 15px 60px;
   text-align: center;
   color: #fff;
   background: #624DAA;
@@ -183,6 +183,7 @@ ul {
   width: 100px;
   margin-right: 20px;
   margin-top: 10px;
+    height: 100px;
 }
 .upload_img img {
   float: left;
@@ -1457,6 +1458,20 @@ button:focus {
     color: #999999;
 }
 /* payment page css end */
+.upload_file .container {
+
+}
+.textOverflow {
+    margin-right: 10px;
+}
+.upload_file .row {
+    margin: 0px;
+}
+.upload_file .resetBtn {
+    position: relative;
+    top: -5px;
+    left: 10px;
+}
 @media (max-width: 767px) {
   .sign_up_box {
     width: 100%;

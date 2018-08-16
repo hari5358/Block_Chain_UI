@@ -10,6 +10,10 @@ import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 export class EducationalDetailsComponent implements OnInit {
     educationalForm: FormGroup;
     submitted = false;
+    selectedFiles: File;
+    url = 'assets/images/';
+    selectedFile: File;
+    educationalDetails: any;
 
     constructor(private router: Router, private formBuilder: FormBuilder) {
         this.router = router;
@@ -20,19 +24,26 @@ export class EducationalDetailsComponent implements OnInit {
     ngOnInit() {
         this.educationalForm = this.formBuilder.group({
             instname1: ['', Validators.required],
-            instname2: ['', Validators.required],
+            joinyear: ['', Validators.required],
             passoutyear1: ['', Validators.required],
-            instname3: ['', Validators.required],
-            passoutyear2: ['', Validators.required],
-            formyear: ['', Validators.required],
-            toyear: ['', Validators.required],
             markssecured1: ['', Validators.required],
-            markssecured2: ['', Validators.required],
-            studyfield: ['', Validators.required],
+            grade: ['', Validators.required],
         });
+
+        this.educationalDetails = [
+            {
+
+            }
+        ]
     }
 
+    addNewEducation() {
+        const item = {
 
+        };
+        this.educationalDetails.push(item);
+
+    }
     goToNext() {
         this.router.navigate(['/professional-details'])
     }
@@ -51,5 +62,25 @@ export class EducationalDetailsComponent implements OnInit {
         this.router.navigate(['/professional-details']);
         // alert('SUCCESS!! :-)')
     }
+
+    onFileChanged(event) {
+        this.selectedFile = event.target.files[0]
+    }
+
+    // image  upload
+
+    onSelectFile(event) {
+        this.selectedFiles = event.target.files;
+        if (event.target.files && event.target.files[0]) {
+            const reader = new FileReader();
+
+            reader.readAsDataURL(event.target.files[0]); // read file as data url
+
+            reader.onload = (event) => { // called once readAsDataURL is completed
+                this.url = event.target.result;
+            }
+        }
+    }
+
 
 }

@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {Router} from '@angular/router';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
+import {UploadFileService} from '../upload-file.service';
+import {HttpResponse} from '@angular/common/http';
 
 @Component({
   selector: 'app-basic-info',
@@ -15,11 +17,37 @@ export class BasicInfoComponent implements OnInit {
     lastname = null;
     address = null;
     dob = null;
+    selectedFiles: FileList;
+    afuConfig = {
+        uploadAPI: {
+            url: 'https://example-file-upload-api'
+        },
+    };
 
-    constructor(private router: Router, private formBuilder: FormBuilder) {
+    url = '';
+
+    currentFileUpload: File;
+
+    constructor(private router: Router, private formBuilder: FormBuilder, private uploadService: UploadFileService) {
         this.router = router;
         this.formBuilder = formBuilder;
+
     }
+
+    selectFile(event) {
+        this.selectedFiles = event.target.files;
+    }
+
+    upload() {
+        this.currentFileUpload = this.selectedFiles.item(0);
+        this.uploadService.pushFileToStorage(this.currentFileUpload).subscribe(event => {
+            if (event instanceof HttpResponse) {
+                console.log('File is completely uploaded!');
+            }
+        });
+        this.selectedFiles = undefined;
+    }
+
     get f() { return this.basicInfoForm.controls; }
 
     ngOnInit() {
@@ -44,5 +72,21 @@ export class BasicInfoComponent implements OnInit {
         this.router.navigate(['/educational-details']);
         // alert('SUCCESS!! :-)')
     }
+
+    // image  upload
+
+    onSelectFile(event) {
+        this.selectedFiles = event.target.files;
+        if (event.target.files && event.target.files[0]) {
+            const reader = new FileReader();
+
+            reader.readAsDataURL(event.target.files[0]); // read file as data url
+
+            reader.onload = (event) => { // called once readAsDataURL is completed
+                this.url = event.target.result;
+            }
+        }
+    }
+
 
 }

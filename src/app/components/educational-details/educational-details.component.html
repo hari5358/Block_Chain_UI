@@ -16,156 +16,191 @@
         </ul>
       </div>
       <div class="full-width">
-        <form class="login_form" [formGroup]="educationalForm" (ngSubmit)="onSubmit()">
+        <form class="login_form" [formGroup]="educationalForm">
           <div class="row">
             <div class="col-md-12 col-sm-12 col-xl-12">
-              <div class="col-md-6 col-sm-6 col-xl-6 float-left p-0">
-                <p class="full-width page_title">Educational Details</p>
-              </div>
-              <div class="col-md-6 col-sm-6 col-xl-6 float-left p-0">
-                <button class="add_new"><i class="fa fa-plus"></i> Add New</button>
-              </div>
-            </div>
-            <div class="col-md-12 col-sm-12 col-xl-12">
-                <p class="sub_title">10th Grade</p>
-                <div class="form-group">
-                  <label>Institution Name</label>
-                  <input class="form-control" required formControlName="instname1" placeholder="Siv Matriculation Higher Secondary School, Sirummugai" [ngClass]="{ 'is-invalid': submitted && f.instname1.errors }">
-                  <div *ngIf="submitted && f.instname1.errors" class="invalid-feedback">
-                    <div *ngIf="f.instname1.errors.required">Institution Name is required</div>
-                  </div>
+                <div class="col-md-6 col-sm-6 col-xl-6 float-left p-0">
+                  <p class="full-width page_title">Educational Details</p>
                 </div>
-                <div class="col-md-6 col-sm-6 col-xl-6 float-left p-0 pr-2">
-                  <div class="form-group">
-                    <label>Passed Out Year</label>
-                    <select class="form-control" required formControlName="passoutyear1" [ngClass]="{ 'is-invalid': submitted && f.passoutyear1.errors }">
-                      <option>2019</option>
-                    </select>
-                    <div *ngIf="submitted && f.passoutyear1.errors" class="invalid-feedback">
-                      <div *ngIf="f.passoutyear1.errors.required">Passed Out Year is required</div>
+                <div class="col-md-6 col-sm-6 col-xl-6 float-left p-0">
+                  <button class="add_new" (click)="addNewEducation()"><i class="fa fa-plus"></i> Add New</button>
+                </div>
+                <!--<p class="sub_title">10th Grade</p>-->
+                <ng-container class="mb-3" *ngFor="let educational of educationalDetails">
+                  <div class="full-width">
+                    <div class="form-group">
+                      <label>Institution Name</label>
+                      <input class="form-control" required formControlName="instname1" placeholder="Siv Matriculation Higher Secondary School, Sirummugai" [ngClass]="{ 'is-invalid': submitted && f.instname1.errors }">
+                      <div *ngIf="submitted && f.instname1.errors" class="invalid-feedback">
+                        <div *ngIf="f.instname1.errors.required">Institution Name is required</div>
+                      </div>
                     </div>
                   </div>
-                </div>
-                <div class="col-md-6 col-sm-6 col-xl-6 float-left p-0 pl-2">
-                  <div class="form-group">
-                    <label>Marks Secured</label>
-                    <input class="form-control" required formControlName="markssecured1" placeholder="85%" [ngClass]="{ 'is-invalid': submitted && f.markssecured1.errors }">
-                    <div *ngIf="submitted && f.markssecured1.errors" class="invalid-feedback">
-                      <div *ngIf="f.markssecured1.errors.required">Marks Secured is required</div>
+                  <div class="full-width">
+                    <div class="col-md-4 col-sm-12 col-xl-4 float-left p-0 pr-2">
+                      <div class="form-group">
+                        <label>Join Year</label>
+                        <select class="form-control" required formControlName="joinyear" [ngClass]="{ 'is-invalid': submitted && f.joinyear.errors }">
+                          <option>2019</option>
+                        </select>
+                        <div *ngIf="submitted && f.joinyear.errors" class="invalid-feedback">
+                          <div *ngIf="f.joinyear.errors.required">Join Year is required</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-4 col-sm-12 col-xl-4 float-left p-0 pr-2 pl-2">
+                      <div class="form-group">
+                        <label>Passed Out Year</label>
+                        <select class="form-control" required formControlName="passoutyear1" [ngClass]="{ 'is-invalid': submitted && f.passoutyear1.errors }">
+                          <option>2019</option>
+                        </select>
+                        <div *ngIf="submitted && f.passoutyear1.errors" class="invalid-feedback">
+                          <div *ngIf="f.passoutyear1.errors.required">Passed Out Year is required</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-4 col-sm-12 col-xl-4 float-left p-0 pl-2">
+                      <div class="form-group">
+                        <label>Marks Secured</label>
+                        <input class="form-control" required formControlName="markssecured1" placeholder="85%" [ngClass]="{ 'is-invalid': submitted && f.markssecured1.errors }">
+                        <div *ngIf="submitted && f.markssecured1.errors" class="invalid-feedback">
+                          <div *ngIf="f.markssecured1.errors.required">Marks Secured is required</div>
+                        </div>
+                      </div>
                     </div>
                   </div>
-                </div>
-                <div class="form-group">
-                  <label class="full-width">Document Upload <i class="fa fa-exclamation-circle"></i></label>
-                  <div class="upload_img">
-                    <img src="assets/images/edu-docu.svg">
+                  <div class="full-width">
+                    <div class="form-group">
+                      <label>Grade</label>
+                      <select class="form-control" required formControlName="grade" [ngClass]="{ 'is-invalid': submitted && f.grade.errors }">
+                          <option>10th Grade</option>
+                          <option>12th Grade</option>
+                          <option>Under Graduation</option>
+                      </select>
+                      <div *ngIf="submitted && f.grade.errors" class="invalid-feedback">
+                        <div *ngIf="f.grade.errors.required">Grade is required</div>
+                      </div>
+                    </div>
                   </div>
-                  <div class="upload_img">
-                    <img src="assets/images/edu-docu1.svg">
+                  <div class="full-width">
+                    <div class="form-group">
+                      <label class="full-width">Document Upload <i class="fa fa-exclamation-circle"></i></label>
+                      <!--<div class="upload_img">-->
+                        <!--<img src="assets/images/edu-docu.svg">-->
+                      <!--</div>-->
+                      <!--<div class="upload_img">-->
+                        <!--<img src="assets/images/edu-docu1.svg">-->
+                      <!--</div>-->
+                      <div class="upload_img">
+                        <img [src]="url">
+                      </div>
+                      <input type="file" accept="image/png" #fileInput multiple style="display: none" (change)="onSelectFile($event)">
+                      <div class="upload_file" (click)="fileInput.click($event)">
+                        <span><i class="fas fa-paperclip"></i></span>
+                        <span>Attach</span>
+                      </div>
+                    </div>
                   </div>
-                  <div class="upload_file">
-                    <span><i class="fas fa-paperclip"></i></span>
-                    <span>Attach</span>
-                  </div>
+                </ng-container>
+                <div class="full-width mt-3 mb-4">
+                  <button class="sign_in_btn next_btn" type="submit">Next</button>
                 </div>
-            </div>
-            <div class="col-md-12 col-sm-12 col-xl-12 mt-3">
-              <p class="sub_title">12th Grade</p>
-              <div class="form-group">
-                <label>Institution Name</label>
-                <input class="form-control" formControlName="instname2" placeholder="Siv Matriculation Higher Secondary School, Sirummugai" [ngClass]="{ 'is-invalid': submitted && f.instname2.errors }">
-                <div *ngIf="submitted && f.instname2.errors" class="invalid-feedback">
-                  <div *ngIf="f.instname2.errors.required">Institution Name is required</div>
-                </div>
-              </div>
-              <div class="col-md-6 col-sm-6 col-xl-6 float-left p-0 pr-2">
-                <div class="form-group">
-                  <label>Passed Out Year</label>
-                  <select class="form-control" formControlName="passoutyear2" [ngClass]="{ 'is-invalid': submitted && f.passoutyear2.errors }">
-                    <option>2019</option>
-                  </select>
-                  <div *ngIf="submitted && f.passoutyear2.errors" class="invalid-feedback">
-                    <div *ngIf="f.passoutyear2.errors.required">Institution Name is required</div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-6 col-sm-6 col-xl-6 float-left p-0 pl-2">
-                <div class="form-group">
-                  <label>Marks Secured</label>
-                  <input class="form-control" formControlName="markssecured2" placeholder="85%" [ngClass]="{ 'is-invalid': submitted && f.markssecured2.errors }">
-                  <div *ngIf="submitted && f.markssecured2.errors" class="invalid-feedback">
-                    <div *ngIf="f.markssecured2.errors.required">Marks Secured is required</div>
-                  </div>
-                </div>
-              </div>
-              <div class="form-group">
-                <label class="full-width">Document Upload <i class="fa fa-exclamation-circle"></i></label>
-                <div class="upload_img">
-                  <img src="assets/images/edu-docu.svg">
-                </div>
-                <div class="upload_img">
-                  <img src="assets/images/edu-docu1.svg">
-                </div>
-                <div class="upload_file">
-                  <span><i class="fas fa-paperclip"></i></span>
-                  <span>Attach</span>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-12 col-sm-12 col-xl-12 mt-3">
-              <p class="sub_title">Under Graduation</p>
-              <div class="form-group">
-                <label>Institution Name</label>
-                <input class="form-control" formControlName="instname3" placeholder="Siv Matriculation Higher Secondary School, Sirummugai" [ngClass]="{ 'is-invalid': submitted && f.instname3.errors }">
-                <div *ngIf="submitted && f.instname3.errors" class="invalid-feedback">
-                  <div *ngIf="f.instname3.errors.required">Institution Name is required</div>
-                </div>
-              </div>
-              <div class="form-group">
-                <label>Field of Study</label>
-                <input class="form-control" formControlName="studyfield" placeholder="Bachelor of Technology (B.Tech), Information Technology" [ngClass]="{ 'is-invalid': submitted && f.studyfield.errors }">
-                <div *ngIf="submitted && f.studyfield.errors" class="invalid-feedback">
-                  <div *ngIf="f.studyfield.errors.required">Field of Study is required</div>
-                </div>
-              </div>
-              <div class="col-md-6 col-sm-6 col-xl-6 float-left p-0 pr-2">
-                <div class="form-group">
-                  <label>From Year</label>
-                  <select class="form-control" formControlName="formyear" [ngClass]="{ 'is-invalid': submitted && f.formyear.errors }">
-                    <option>2011</option>
-                  </select>
-                  <div *ngIf="submitted && f.formyear.errors" class="invalid-feedback">
-                    <div *ngIf="f.formyear.errors.required">From Year is required</div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-6 col-sm-6 col-xl-6 float-left p-0 pl-2">
-                <div class="form-group">
-                  <label>To Year</label>
-                  <input class="form-control" formControlName="toyear" placeholder="2018" [ngClass]="{ 'is-invalid': submitted && f.toyear.errors }">
-                  <div *ngIf="submitted && f.toyear.errors" class="invalid-feedback">
-                    <div *ngIf="f.toyear.errors.required">To Year is required</div>
-                  </div>
-                </div>
-              </div>
-              <div class="form-group">
-                <label class="full-width">Document Upload <i class="fa fa-exclamation-circle"></i></label>
-                <div class="upload_img">
-                  <img src="assets/images/edu-docu.svg">
-                </div>
-                <div class="upload_img">
-                  <img src="assets/images/edu-docu1.svg">
-                </div>
-                <div class="upload_file">
-                      <span><i class="fas fa-paperclip"></i></span>
-                      <span>Attach</span>
-                </div>
-              </div>
             </div>
           </div>
-          <div class="full-width mt-3 mb-4">
-            <button class="sign_in_btn next_btn" type="submit">Next</button>
-          </div>
+            <!--<div class="col-md-12 col-sm-12 col-xl-12 mt-3">-->
+              <!--<p class="sub_title">12th Grade</p>-->
+              <!--<div class="form-group">-->
+                <!--<label>Institution Name</label>-->
+                <!--<input class="form-control" formControlName="instname2" placeholder="Siv Matriculation Higher Secondary School, Sirummugai" [ngClass]="{ 'is-invalid': submitted && f.instname2.errors }">-->
+                <!--<div *ngIf="submitted && f.instname2.errors" class="invalid-feedback">-->
+                  <!--<div *ngIf="f.instname2.errors.required">Institution Name is required</div>-->
+                <!--</div>-->
+              <!--</div>-->
+              <!--<div class="col-md-6 col-sm-6 col-xl-6 float-left p-0 pr-2">-->
+                <!--<div class="form-group">-->
+                  <!--<label>Passed Out Year</label>-->
+                  <!--<select class="form-control" formControlName="passoutyear2" [ngClass]="{ 'is-invalid': submitted && f.passoutyear2.errors }">-->
+                    <!--<option>2019</option>-->
+                  <!--</select>-->
+                  <!--<div *ngIf="submitted && f.passoutyear2.errors" class="invalid-feedback">-->
+                    <!--<div *ngIf="f.passoutyear2.errors.required">Institution Name is required</div>-->
+                  <!--</div>-->
+                <!--</div>-->
+              <!--</div>-->
+              <!--<div class="col-md-6 col-sm-6 col-xl-6 float-left p-0 pl-2">-->
+                <!--<div class="form-group">-->
+                  <!--<label>Marks Secured</label>-->
+                  <!--<input class="form-control" formControlName="markssecured2" placeholder="85%" [ngClass]="{ 'is-invalid': submitted && f.markssecured2.errors }">-->
+                  <!--<div *ngIf="submitted && f.markssecured2.errors" class="invalid-feedback">-->
+                    <!--<div *ngIf="f.markssecured2.errors.required">Marks Secured is required</div>-->
+                  <!--</div>-->
+                <!--</div>-->
+              <!--</div>-->
+              <!--<div class="form-group">-->
+                <!--<label class="full-width">Document Upload <i class="fa fa-exclamation-circle"></i></label>-->
+                <!--<div class="upload_img">-->
+                  <!--<img src="assets/images/edu-docu.svg">-->
+                <!--</div>-->
+                <!--<div class="upload_img">-->
+                  <!--<img src="assets/images/edu-docu1.svg">-->
+                <!--</div>-->
+                <!--<input type="file" #fileInput style="display: none" (change)="onFileChanged($event)">-->
+                <!--<div class="upload_file" (click)="fileInput.click()">-->
+                  <!--<span><i class="fas fa-paperclip"></i></span>-->
+                  <!--<span>Attach</span>-->
+                <!--</div>-->
+              <!--</div>-->
+            <!--</div>-->
+            <!--<div class="col-md-12 col-sm-12 col-xl-12 mt-3">-->
+              <!--<p class="sub_title">Under Graduation</p>-->
+              <!--<div class="form-group">-->
+                <!--<label>Institution Name</label>-->
+                <!--<input class="form-control" formControlName="instname3" placeholder="Siv Matriculation Higher Secondary School, Sirummugai" [ngClass]="{ 'is-invalid': submitted && f.instname3.errors }">-->
+                <!--<div *ngIf="submitted && f.instname3.errors" class="invalid-feedback">-->
+                  <!--<div *ngIf="f.instname3.errors.required">Institution Name is required</div>-->
+                <!--</div>-->
+              <!--</div>-->
+              <!--<div class="form-group">-->
+                <!--<label>Field of Study</label>-->
+                <!--<input class="form-control" formControlName="studyfield" placeholder="Bachelor of Technology (B.Tech), Information Technology" [ngClass]="{ 'is-invalid': submitted && f.studyfield.errors }">-->
+                <!--<div *ngIf="submitted && f.studyfield.errors" class="invalid-feedback">-->
+                  <!--<div *ngIf="f.studyfield.errors.required">Field of Study is required</div>-->
+                <!--</div>-->
+              <!--</div>-->
+              <!--<div class="col-md-6 col-sm-6 col-xl-6 float-left p-0 pr-2">-->
+                <!--<div class="form-group">-->
+                  <!--<label>From Year</label>-->
+                  <!--<select class="form-control" formControlName="formyear" [ngClass]="{ 'is-invalid': submitted && f.formyear.errors }">-->
+                    <!--<option>2011</option>-->
+                  <!--</select>-->
+                  <!--<div *ngIf="submitted && f.formyear.errors" class="invalid-feedback">-->
+                    <!--<div *ngIf="f.formyear.errors.required">From Year is required</div>-->
+                  <!--</div>-->
+                <!--</div>-->
+              <!--</div>-->
+              <!--<div class="col-md-6 col-sm-6 col-xl-6 float-left p-0 pl-2">-->
+                <!--<div class="form-group">-->
+                  <!--<label>To Year</label>-->
+                  <!--<input class="form-control" formControlName="toyear" placeholder="2018" [ngClass]="{ 'is-invalid': submitted && f.toyear.errors }">-->
+                  <!--<div *ngIf="submitted && f.toyear.errors" class="invalid-feedback">-->
+                    <!--<div *ngIf="f.toyear.errors.required">To Year is required</div>-->
+                  <!--</div>-->
+                <!--</div>-->
+              <!--</div>-->
+              <!--<div class="form-group">-->
+                <!--<label class="full-width">Document Upload <i class="fa fa-exclamation-circle"></i></label>-->
+                <!--<div class="upload_img">-->
+                  <!--<img src="assets/images/edu-docu.svg">-->
+                <!--</div>-->
+                <!--<div class="upload_img">-->
+                  <!--<img src="assets/images/edu-docu1.svg">-->
+                <!--</div>-->
+                <!--<div class="upload_file">-->
+                      <!--<span><i class="fas fa-paperclip"></i></span>-->
+                      <!--<span>Attach</span>-->
+                <!--</div>-->
+              <!--</div>-->
+            <!--</div>-->
         </form>
       </div>
     </div>
