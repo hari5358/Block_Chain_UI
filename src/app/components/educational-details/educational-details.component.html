@@ -16,7 +16,7 @@
         </ul>
       </div>
       <div class="full-width">
-        <form class="login_form" educationalForm="ngForm">
+        <form class="login_form" [formGroup]="educationalForm" (ngSubmit)="onSubmit()">
           <div class="row">
             <div class="col-md-12 col-sm-12 col-xl-12">
               <div class="col-md-6 col-sm-6 col-xl-6 float-left p-0">
@@ -30,20 +30,29 @@
                 <p class="sub_title">10th Grade</p>
                 <div class="form-group">
                   <label>Institution Name</label>
-                  <input class="form-control" name="instname" id="instname" placeholder="Siv Matriculation Higher Secondary School, Sirummugai">
+                  <input class="form-control" required formControlName="instname1" placeholder="Siv Matriculation Higher Secondary School, Sirummugai" [ngClass]="{ 'is-invalid': submitted && f.instname1.errors }">
+                  <div *ngIf="submitted && f.instname1.errors" class="invalid-feedback">
+                    <div *ngIf="f.instname1.errors.required">Institution Name is required</div>
+                  </div>
                 </div>
                 <div class="col-md-6 col-sm-6 col-xl-6 float-left p-0 pr-2">
                   <div class="form-group">
                     <label>Passed Out Year</label>
-                    <select class="form-control">
+                    <select class="form-control" required formControlName="passoutyear1" [ngClass]="{ 'is-invalid': submitted && f.passoutyear1.errors }">
                       <option>2019</option>
                     </select>
+                    <div *ngIf="submitted && f.passoutyear1.errors" class="invalid-feedback">
+                      <div *ngIf="f.passoutyear1.errors.required">Passed Out Year is required</div>
+                    </div>
                   </div>
                 </div>
                 <div class="col-md-6 col-sm-6 col-xl-6 float-left p-0 pl-2">
                   <div class="form-group">
                     <label>Marks Secured</label>
-                    <input class="form-control" name="" id="" placeholder="85%">
+                    <input class="form-control" required formControlName="markssecured1" placeholder="85%" [ngClass]="{ 'is-invalid': submitted && f.markssecured1.errors }">
+                    <div *ngIf="submitted && f.markssecured1.errors" class="invalid-feedback">
+                      <div *ngIf="f.markssecured1.errors.required">Marks Secured is required</div>
+                    </div>
                   </div>
                 </div>
                 <div class="form-group">
@@ -64,20 +73,29 @@
               <p class="sub_title">12th Grade</p>
               <div class="form-group">
                 <label>Institution Name</label>
-                <input class="form-control" name="instname" id="instname" placeholder="Siv Matriculation Higher Secondary School, Sirummugai">
+                <input class="form-control" formControlName="instname2" placeholder="Siv Matriculation Higher Secondary School, Sirummugai" [ngClass]="{ 'is-invalid': submitted && f.instname2.errors }">
+                <div *ngIf="submitted && f.instname2.errors" class="invalid-feedback">
+                  <div *ngIf="f.instname2.errors.required">Institution Name is required</div>
+                </div>
               </div>
               <div class="col-md-6 col-sm-6 col-xl-6 float-left p-0 pr-2">
                 <div class="form-group">
                   <label>Passed Out Year</label>
-                  <select class="form-control">
+                  <select class="form-control" formControlName="passoutyear2" [ngClass]="{ 'is-invalid': submitted && f.passoutyear2.errors }">
                     <option>2019</option>
                   </select>
+                  <div *ngIf="submitted && f.passoutyear2.errors" class="invalid-feedback">
+                    <div *ngIf="f.passoutyear2.errors.required">Institution Name is required</div>
+                  </div>
                 </div>
               </div>
               <div class="col-md-6 col-sm-6 col-xl-6 float-left p-0 pl-2">
                 <div class="form-group">
                   <label>Marks Secured</label>
-                  <input class="form-control" name="" id="" placeholder="85%">
+                  <input class="form-control" formControlName="markssecured2" placeholder="85%" [ngClass]="{ 'is-invalid': submitted && f.markssecured2.errors }">
+                  <div *ngIf="submitted && f.markssecured2.errors" class="invalid-feedback">
+                    <div *ngIf="f.markssecured2.errors.required">Marks Secured is required</div>
+                  </div>
                 </div>
               </div>
               <div class="form-group">
@@ -98,24 +116,36 @@
               <p class="sub_title">Under Graduation</p>
               <div class="form-group">
                 <label>Institution Name</label>
-                <input class="form-control" name="instname" id="instname" placeholder="Siv Matriculation Higher Secondary School, Sirummugai">
+                <input class="form-control" formControlName="instname3" placeholder="Siv Matriculation Higher Secondary School, Sirummugai" [ngClass]="{ 'is-invalid': submitted && f.instname3.errors }">
+                <div *ngIf="submitted && f.instname3.errors" class="invalid-feedback">
+                  <div *ngIf="f.instname3.errors.required">Institution Name is required</div>
+                </div>
               </div>
               <div class="form-group">
                 <label>Field of Study</label>
-                <input class="form-control" name="instname" id="instname" placeholder="Bachelor of Technology (B.Tech), Information Technology">
+                <input class="form-control" formControlName="studyfield" placeholder="Bachelor of Technology (B.Tech), Information Technology" [ngClass]="{ 'is-invalid': submitted && f.studyfield.errors }">
+                <div *ngIf="submitted && f.studyfield.errors" class="invalid-feedback">
+                  <div *ngIf="f.studyfield.errors.required">Field of Study is required</div>
+                </div>
               </div>
               <div class="col-md-6 col-sm-6 col-xl-6 float-left p-0 pr-2">
                 <div class="form-group">
                   <label>From Year</label>
-                  <select class="form-control">
+                  <select class="form-control" formControlName="formyear" [ngClass]="{ 'is-invalid': submitted && f.formyear.errors }">
                     <option>2011</option>
                   </select>
+                  <div *ngIf="submitted && f.formyear.errors" class="invalid-feedback">
+                    <div *ngIf="f.formyear.errors.required">From Year is required</div>
+                  </div>
                 </div>
               </div>
               <div class="col-md-6 col-sm-6 col-xl-6 float-left p-0 pl-2">
                 <div class="form-group">
                   <label>To Year</label>
-                  <input class="form-control" name="" id="" placeholder="2018">
+                  <input class="form-control" formControlName="toyear" placeholder="2018" [ngClass]="{ 'is-invalid': submitted && f.toyear.errors }">
+                  <div *ngIf="submitted && f.toyear.errors" class="invalid-feedback">
+                    <div *ngIf="f.toyear.errors.required">To Year is required</div>
+                  </div>
                 </div>
               </div>
               <div class="form-group">
@@ -134,7 +164,7 @@
             </div>
           </div>
           <div class="full-width mt-3 mb-4">
-            <button class="sign_in_btn next_btn" (click)="goToNext()" type="submit" [disabled]="!BasicInfoForm.invalid">Next</button>
+            <button class="sign_in_btn next_btn" type="submit">Next</button>
           </div>
         </form>
       </div>

@@ -143,22 +143,22 @@
                             <div class="full-width position-absolute">
                                 <span>Documents</span> <button class="verify_grade">Public</button>
                             </div>
-                            <div class="view_docs" routerLink="/payment">
-                                <img src="assets/images/wallet-locked.svg">
-                                <p>Pay to View this <br> Private info</p>
-                                <span></span>
-                            </div>
-                            <!--<div class="docs_list">-->
-                                <!--<div class="image_list">-->
-                                    <!--<img src="assets/images/edu-docu.svg">-->
-                                    <!--<img src="assets/images/edu-docu1.svg">-->
-                                    <!--<img src="assets/images/edu-docu.svg">-->
-                                <!--</div>-->
-                                <!--<div class="doc_action">-->
-                                    <!--<img src="assets/images/Edit 13 px.svg" data-toggle="modal" data-target="#exampleModalCenter1">-->
-                                    <!--<img src="assets/images/unlock.svg">-->
-                                <!--</div>-->
+                            <!--<div class="view_docs" routerLink="/payment">-->
+                                <!--<img src="assets/images/wallet-locked.svg">-->
+                                <!--<p>Pay to View this <br> Private info</p>-->
+                                <!--<span></span>-->
                             <!--</div>-->
+                            <div class="docs_list">
+                                <div class="image_list">
+                                    <img src="assets/images/edu-docu.svg">
+                                    <img src="assets/images/edu-docu1.svg">
+                                    <img src="assets/images/edu-docu.svg">
+                                </div>
+                                <div class="doc_action">
+                                    <img src="assets/images/Edit 13 px.svg" data-toggle="modal" data-target="#exampleModalCenter1">
+                                    <img src="assets/images/unlock.svg">
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -525,7 +525,7 @@
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalCenterTitle1">Edit Under Graduation Details</h5>
+                <h5 class="modal-title" id="exampleModalCenterTitle1">Edit 12th Grade Details</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
@@ -533,37 +533,18 @@
             <div class="modal-body">
                 <div class="full-width">
                     <div class="form-group">
-                        <label>College Name</label>
-                        <input class="form-control" placeholder="Maharaja Engineering College">
+                        <label>Institution Name</label>
+                        <input class="form-control" placeholder="Siv Matriculation Higher Secondary School, Sirummugai">
                     </div>
                     <div class="form-group">
-                        <label>Degree</label>
-                        <input class="form-control" placeholder="Bachelor Of Technology">
-                    </div>
-                    <div class="form-group">
-                        <label>Field Of Study</label>
-                        <input class="form-control" placeholder="Inforamation Technology">
-                    </div>
-                    <div class="form-group">
-                        <div class="col-md-6 col-sm-6 col-xl-6 float-left p-0 pr-2">
-                            <div class="form-group">
-                                <label>From Year</label>
-                                <select class="form-control">
-                                    <option>2011</option>
-                                    <option>2012</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-sm-6 col-xl-6 float-left p-0 pl-2">
-                            <div class="form-group">
-                                <label>To Year</label>
-                                <input class="form-control" placeholder="2019">
-                            </div>
-                        </div>
+                        <label>Passed Out Year</label>
+                        <select class="form-control" required formControlName="passoutyear1">
+                            <option>2019</option>
+                        </select>
                     </div>
                     <div class="form-group">
                         <label>Grade/ Marks Secured</label>
-                        <input class="form-control" placeholder="Inforamation Technology">
+                        <input class="form-control" placeholder="82%">
                     </div>
                     <div class="form-group">
                         <span class="float-left">Documents</span>
@@ -598,7 +579,7 @@
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalCenterTitle2">Edit Under Graduation Details</h5>
+                <h5 class="modal-title" id="exampleModalCenterTitle2">Edit 10th Grade Details</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
@@ -606,37 +587,18 @@
             <div class="modal-body">
                 <div class="full-width">
                     <div class="form-group">
-                        <label>College Name</label>
-                        <input class="form-control" placeholder="Maharaja Engineering College">
+                        <label>Institution Name</label>
+                        <input class="form-control" placeholder="Siv Matriculation Higher Secondary School, Sirummugai">
                     </div>
                     <div class="form-group">
-                        <label>Degree</label>
-                        <input class="form-control" placeholder="Bachelor Of Technology">
-                    </div>
-                    <div class="form-group">
-                        <label>Field Of Study</label>
-                        <input class="form-control" placeholder="Inforamation Technology">
-                    </div>
-                    <div class="form-group">
-                        <div class="col-md-6 col-sm-6 col-xl-6 float-left p-0 pr-2">
-                            <div class="form-group">
-                                <label>From Year</label>
-                                <select class="form-control">
-                                    <option>2011</option>
-                                    <option>2012</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-sm-6 col-xl-6 float-left p-0 pl-2">
-                            <div class="form-group">
-                                <label>To Year</label>
-                                <input class="form-control" placeholder="2019">
-                            </div>
-                        </div>
+                        <label>Passed Out Year</label>
+                        <select class="form-control" required formControlName="passoutyear1">
+                            <option>2019</option>
+                        </select>
                     </div>
                     <div class="form-group">
                         <label>Grade/ Marks Secured</label>
-                        <input class="form-control" placeholder="Inforamation Technology">
+                        <input class="form-control" placeholder="82%">
                     </div>
                     <div class="form-group">
                         <span class="float-left">Documents</span>

@@ -7,7 +7,7 @@
     <div class="main_container">
         <div class="login_container">
             <div class="full-width">
-                <form class="login_form">
+                <form class="login_form" [formGroup]="signinForm" (ngSubmit)="onSubmit()">
                       <div class="row">
                         <div class="col-md-12 col-sm-12 col-xl-12 mb-4">
                           <div class="col-md-3 col-sm-3 col-xl-3 float-left">
@@ -17,7 +17,10 @@
                           </div>
                           <div class="col-md-8 col-xl-8 col-sm-8 float-left">
                               <div class="form-group">
-                                  <input class="form-control" id="pubkey" name="pubkey" placeholder="f324323dsfsdfdsdsfdsfds">
+                                  <input class="form-control" required formControlName="pubkey" [ngClass]="{ 'is-invalid': submitted && f.pubkey.errors }" placeholder="f324323dsfsdfdsdsfdsfds">
+                                  <div *ngIf="submitted && f.pubkey.errors" class="invalid-feedback">
+                                      <div *ngIf="f.pubkey.errors.required">Public Key is required</div>
+                                  </div>
                               </div>
                           </div>
                           <div class="col-md-1 col-sm-1 col-xl-1 float-left">
@@ -32,7 +35,10 @@
                           </div>
                           <div class="col-md-8 col-xl-8 col-sm-8 float-left">
                             <div class="form-group">
-                              <input class="form-control" id="privatekey" name="privatekey" placeholder="Sent to your mail id">
+                              <input class="form-control" required formControlName="privatekey" [ngClass]="{ 'is-invalid': submitted && f.privatekey.errors }" placeholder="Sent to your mail id">
+                            <div *ngIf="submitted && f.privatekey.errors" class="invalid-feedback">
+                                <div *ngIf="f.privatekey.errors.required"> Private key is required</div>
+                            </div>
                             </div>
                           </div>
                           <div class="col-md-1 col-sm-1 col-xl-1 float-left">
@@ -47,7 +53,10 @@
                           </div>
                           <div class="col-md-6 col-xl-6 col-sm-6 float-left">
                             <div class="form-group">
-                              <input class="form-control" id="athenticatecode" name="athenticatecode" value="08645">
+                              <input class="form-control" formControlName="athenticatecode" required value="08645" [ngClass]="{ 'is-invalid': submitted && f.athenticatecode.errors }">
+                                <div *ngIf="submitted && f.athenticatecode.errors" class="invalid-feedback">
+                                    <div *ngIf="f.athenticatecode.errors.required"> Google Athenticator Code is required</div>
+                                </div>
                             </div>
                           </div>
                           <div class="col-md-1 col-sm-1 col-xl-1 float-left">
@@ -67,7 +76,7 @@
                           </div>
                       </div>
                       <div class="full-width mt-3 mb-4">
-                          <button class="sign_in_btn" type="submit" (click)="goToNext()">Sign In</button>
+                          <button class="sign_in_btn" type="submit">Sign In</button>
                       </div>
                 </form>
             </div>

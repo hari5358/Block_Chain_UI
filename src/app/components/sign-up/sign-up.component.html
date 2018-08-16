@@ -12,47 +12,44 @@
               </ul>
               <div class="tab-content mt-3">
                   <div id="signup" class="tab-pane fade in active show">
-                      <form signupform="ngForm">
+                      <form [formGroup]="signUpForm" (ngSubmit)="onSubmit()">
                           <div class="full-width">
                                 <div class="form-group">
                                     <label>Profile Url</label>
-                                    <input class="input_control" placeholder="Heptagon" profileInput="ngModel" id="profileurl" required name="profileurl" [(ngModel)]="profileurl" #profileInput >
-                                    <div *ngIf="profileurl.invalid && (profileurl.dirty || profileurl.touched)"
-                                         class="alert alert-danger">
-                                        <div *ngIf="profileurl.errors.required">
-                                            Profile url is required.
-                                        </div>
-                                        <div *ngIf="profileurl.errors.minlength">
-                                            Name must be at least 4 characters long.
-                                        </div>
+                                    <input class="input_control form-control" required formControlName="profileurl" [ngClass]="{ 'is-invalid': submitted && f.profileurl.errors }" placeholder="Heptagon" >
+                                    <div *ngIf="submitted && f.profileurl.errors" class="invalid-feedback">
+                                        <div *ngIf="f.profileurl.errors.required">Profile url  is required</div>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label>Mail Id</label>
-                                    <input class="input_control" placeholder="admin@heptagon.in" id="email" name="email" required [(ngModel)]="email" emailInput="ngModel" #emailInput>
+                                    <input class="input_control form-control" required formControlName="email" placeholder="admin@heptagon.in" [ngClass]="{ 'is-invalid': submitted && f.email.errors }">
+                                    <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+                                        <div *ngIf="f.email.errors.required">Email is required</div>
+                                        <div *ngIf="f.email.errors.email">Email must be a valid email address</div>
+                                    </div>
                                 </div>
                           </div>
                           <div class="full-width">
                                 <p class="text-center pay_text">You can Pay With </p>
                                 <div class="payment_col">
-                                        <ul class="payment_method">
-                                            <li>
-                                                <div class="icon etherum"><img src="assets/images/Etherum.svg"></div>
-                                                <span>Etherum</span>
-                                            </li>
-                                            <li>
-                                                <div class="icon etherum"><img src="assets/images/Bitcoin.svg"></div>
-                                                <span>Bitcoin</span>
-                                            </li>
-                                            <li>
-                                                <div class="icon etherum"><img src="assets/images/Flat money.svg"></div>
-                                                <span>Flat Money</span>
-                                            </li>
-                                        </ul>
+                                    <ul class="payment_method">
+                                        <li>
+                                            <div class="icon etherum"><img src="assets/images/Etherum.svg"></div>
+                                            <span>Etherum</span>
+                                        </li>
+                                        <li>
+                                            <div class="icon etherum"><img src="assets/images/Bitcoin.svg"></div>
+                                            <span>Bitcoin</span>
+                                        </li>
+                                        <li>
+                                            <div class="icon etherum"><img src="assets/images/Flat money.svg"></div>
+                                            <span>Flat Money</span>
+                                        </li>
+                                    </ul>
                                 </div>
-
                                 <p class="pay_info mt-2">A gas token of 0.0001 ETH / 0.00000 BTC /FIAT 1$ <br>will be charged. <span>Why?</span></p>
-                                <button class="sign_up_btn" (click)="reDirectToLogin()" type="submit" [disabled]="!signupform.valid">Sign Up</button>
+                                <button class="sign_up_btn" type="submit">Sign Up</button>
                           </div>
                       </form>
                   </div>

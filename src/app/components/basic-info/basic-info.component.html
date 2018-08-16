@@ -16,7 +16,7 @@
             </ul>
         </div>
         <div class="full-width">
-          <form class="login_form" basicInfoForm="ngForm">
+          <form class="login_form" [formGroup]="basicInfoForm" (ngSubmit)="onSubmit()">
             <div class="row">
               <div class="full-width">
                   <div class="col-md-6 col-sm-6 col-xl-6 float-left">
@@ -30,13 +30,19 @@
                   <div class="col-md-6 col-sm-6 col-xl-6 float-left p-0 pr-2">
                       <div class="form-group">
                           <label>First Name</label>
-                          <input class="form-control" name="firstname" id="firstname" placeholder="Arivoli">
+                          <input class="form-control" required formControlName="firstname" placeholder="Arivoli" [ngClass]="{ 'is-invalid': submitted && f.firstname.errors }">
+                          <div *ngIf="submitted && f.firstname.errors" class="invalid-feedback">
+                              <div *ngIf="f.firstname.errors.required">First Name is required</div>
+                          </div>
                       </div>
                   </div>
                   <div class="col-md-6 col-sm-6 col-xl-6 float-left p-0 pl-2">
                     <div class="form-group">
                       <label>Last Name</label>
-                      <input class="form-control" name="lastname" id="lastname" placeholder="Tamilarasan">
+                      <input class="form-control" formControlName="lastname" placeholder="Tamilarasan" [ngClass]="{ 'is-invalid': submitted && f.lastname.errors }">
+                        <div *ngIf="submitted && f.lastname.errors" class="invalid-feedback">
+                            <div *ngIf="f.lastname.errors.required">Last Name  is required</div>
+                        </div>
                     </div>
                   </div>
               </div>
@@ -47,14 +53,14 @@
                     <div class="full-width">
                         <div class="col-md-3 col-sm-3 col-xl-3 p-0 pr-1 float-left">
                               <div class="form-group">
-                                  <select class="form-control">
+                                  <select class="form-control" >
                                       <option>Day</option>
                                   </select>
                               </div>
                         </div>
                         <div class="col-md-5 col-sm-5 col-xl-5 float-left p-0 pr-1 pl-1 float-left">
                           <div class="form-group">
-                            <select class="form-control">
+                            <select class="form-control" >
                                 <option>Month</option>
                             </select>
                           </div>
@@ -66,6 +72,9 @@
                             </select>
                           </div>
                         </div>
+                        <!--<div *ngIf="submitted && f.dob.errors" class="invalid-feedback" [ngClass]="{ 'is-invalid': submitted && f.dob.errors }">-->
+                            <!--<div *ngIf="f.dob.errors.required">Last Name  is required</div>-->
+                        <!--</div>-->
                     </div>
                   </div>
                 </div>
@@ -89,7 +98,10 @@
               <div class="col-md-12 col-xl-12 col-sm-12">
                   <div class="form-group">
                         <label>Address</label>
-                        <textarea class="form-control"></textarea>
+                        <textarea class="form-control" formControlName="address" [ngClass]="{ 'is-invalid': submitted && f.address.errors }"></textarea>
+                          <div *ngIf="submitted && f.address.errors" class="invalid-feedback">
+                              <div *ngIf="f.address.errors.required">Address is required</div>
+                          </div>
                   </div>
               </div>
               <div class="col-md-12 col-sm-12 col-xl-12">
@@ -109,7 +121,7 @@
               </div>
             </div>
             <div class="full-width mt-3 mb-4">
-              <button class="sign_in_btn next_btn" (click)="goToNext()" type="submit" [disabled]="!BasicInfoForm.invalid">Next</button>
+              <button class="sign_in_btn next_btn" type="submit" >Next</button>
             </div>
           </form>
         </div>

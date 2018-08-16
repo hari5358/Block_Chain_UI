@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Router} from '@angular/router';
+import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 
 @Component({
   selector: 'app-professional-details',
@@ -7,13 +8,25 @@ import {Router} from '@angular/router';
   styleUrls: ['./professional-details.component.css']
 })
 export class ProfessionalDetailsComponent implements OnInit {
+    professionalForm: FormGroup;
+    submitted = false;
 
-  constructor(private router: Router) {
-    this.router = router;
-  }
+    constructor(private router: Router, private formBuilder: FormBuilder) {
+        this.router = router;
+        this.formBuilder = formBuilder;
+    }
+    get f() { return this.professionalForm.controls; }
 
-  ngOnInit() {
-  }
+    ngOnInit() {
+        this.professionalForm = this.formBuilder.group({
+            title: ['', Validators.required],
+            company: ['', Validators.required],
+            location: ['', Validators.required],
+            fromyear: ['', Validators.required],
+            toyear: ['', Validators.required],
+            description: ['', Validators.required],
+        });
+    }
 
   goToNext() {
       this.router.navigate(['/profile']);
@@ -21,6 +34,17 @@ export class ProfessionalDetailsComponent implements OnInit {
 
     goToPrevious() {
         this.router.navigate(['/educational-details']);
+    }
+
+    onSubmit() {
+        this.submitted = true;
+
+        // stop here if form is invalid
+        if (this.professionalForm.invalid) {
+            return;
+        }
+        this.router.navigate(['/profile']);
+        // alert('SUCCESS!! :-)')
     }
 
 }
