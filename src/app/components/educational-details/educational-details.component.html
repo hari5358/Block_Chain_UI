@@ -16,17 +16,17 @@
         </ul>
       </div>
       <div class="full-width">
-        <form class="login_form" [formGroup]="educationalForm">
+        <form class="login_form" [formGroup]="educationalForm" (ngSubmit)="onSubmit()">
           <div class="row">
             <div class="col-md-12 col-sm-12 col-xl-12">
                 <div class="col-md-6 col-sm-6 col-xl-6 float-left p-0">
                   <p class="full-width page_title">Educational Details</p>
                 </div>
                 <div class="col-md-6 col-sm-6 col-xl-6 float-left p-0">
-                  <button class="add_new" (click)="addNewEducation()"><i class="fa fa-plus"></i> Add New</button>
+                  <div class="add_new" (click)="addNewEducation()"><i class="fa fa-plus"></i> Add New</div>
                 </div>
                 <!--<p class="sub_title">10th Grade</p>-->
-                <ng-container class="mb-3" *ngFor="let educational of educationalDetails">
+                <div class="full-width mb-3" *ngFor="let educational of educationalDetails">
                   <div class="full-width">
                     <div class="form-group">
                       <label>Institution Name</label>
@@ -85,23 +85,12 @@
                   <div class="full-width">
                     <div class="form-group">
                       <label class="full-width">Document Upload <i class="fa fa-exclamation-circle"></i></label>
-                      <!--<div class="upload_img">-->
-                        <!--<img src="assets/images/edu-docu.svg">-->
-                      <!--</div>-->
-                      <!--<div class="upload_img">-->
-                        <!--<img src="assets/images/edu-docu1.svg">-->
-                      <!--</div>-->
-                      <div class="upload_img">
-                        <img [src]="url">
-                      </div>
-                      <input type="file" accept="image/png" #fileInput multiple style="display: none" (change)="onSelectFile($event)">
-                      <div class="upload_file" (click)="fileInput.click($event)">
-                        <span><i class="fas fa-paperclip"></i></span>
-                        <span>Attach</span>
+                      <div class="full-width">
+                        <image-upload></image-upload>
                       </div>
                     </div>
                   </div>
-                </ng-container>
+                </div>
                 <div class="full-width mt-3 mb-4">
                   <button class="sign_in_btn next_btn" type="submit">Next</button>
                 </div>

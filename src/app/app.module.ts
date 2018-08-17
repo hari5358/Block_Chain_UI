@@ -21,6 +21,7 @@ import { PaymentSuccessComponent } from './components/payment-success/payment-su
 import {AngularFileUploaderModule} from 'angular-file-uploader';
 import {UploadFileService} from './components/upload-file.service';
 import {HttpClientModule} from '@angular/common/http';
+import {ImageUploadModule} from 'angular2-image-upload';
 
 
 @NgModule({
@@ -47,7 +48,8 @@ import {HttpClientModule} from '@angular/common/http';
     FormsModule,
     ReactiveFormsModule,
     AngularFileUploaderModule,
-    HttpClientModule
+    HttpClientModule,
+    ImageUploadModule.forRoot()
   ],
   providers: [UploadFileService],
   bootstrap: [AppComponent]

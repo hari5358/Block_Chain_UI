@@ -1472,6 +1472,32 @@ button:focus {
     top: -5px;
     left: 10px;
 }
+.img-ul-upload {
+    background: #624DAA !important;
+}
+.img-ul-button {
+    box-shadow: unset !important;
+    font-size: 24px !important;
+    line-height: 24px !important;
+    border-radius: 5px;
+    text-transform: capitalize !important;
+}
+.img-ul-image {
+    background-size: 100px 100px !important;
+    width: 100px !important;
+    height: 100px !important;
+    margin: 0px 0px 20px 10px!important;
+    border-radius: 4px;
+}
+.img-ul {
+    background-color: unset !important;
+}
+.img-ul-clear {
+    display: none !important;
+}
+.img-ul-drag-box-msg {
+    display: none !important;
+}
 @media (max-width: 767px) {
   .sign_up_box {
     width: 100%;

@@ -16,7 +16,7 @@
             </ul>
         </div>
         <div class="full-width">
-          <form class="login_form" [formGroup]="basicInfoForm">
+          <form class="login_form" [formGroup]="basicInfoForm" (ngSubmit)="onSubmit()">
             <div class="row">
               <div class="full-width">
                   <div class="col-md-6 col-sm-12 col-xl-6 float-left">
@@ -110,17 +110,23 @@
                         <!--<div class="upload_img">-->
                             <!--<img src="assets/images/edu-docu1.svg">-->
                         <!--</div>-->
-                        <div class="upload_img">
-                            <img [src]="url">
-                        </div>
+                        <!--<div class="upload_img">-->
+                            <!--<img [src]="url">-->
+                        <!--</div>-->
                         <!--<angular-file-uploader class="upload_file"-->
                                 <!--[config]="afuConfig">-->
                         <!--</angular-file-uploader>-->
-                        <input type="file" accept="image/png" #fileInput multiple style="display: none" (change)="onSelectFile($event)">
-                        <div class="upload_file" (click)="fileInput.click($event)">
-                            <span><i class="fas fa-paperclip"></i></span>
-                            <span>Attach</span>
-                        </div>
+                        <!--<input type="file" accept="image/png" #fileInput multiple style="display: none" (change)="onSelectFile($event)">-->
+                        <!--<div class="upload_file" (click)="fileInput.click($event)">-->
+                            <!--<span><i class="fas fa-paperclip"></i></span>-->
+                            <!--<span>Attach</span>-->
+                        <!--</div>-->
+                        <image-upload [buttonCaption]="'Select Documents'"
+                                      [extensions]="['jpg','png','gif', 'svg']"
+
+                        >
+
+                        </image-upload>
                     </div>
               </div>
             </div>

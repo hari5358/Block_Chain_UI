@@ -15,8 +15,6 @@ export class BasicInfoComponent implements OnInit {
     submitted = false;
     firstname = null;
     lastname = null;
-    address = null;
-    dob = null;
     selectedFiles: FileList;
     afuConfig = {
         uploadAPI: {
@@ -27,6 +25,7 @@ export class BasicInfoComponent implements OnInit {
     url = '';
 
     currentFileUpload: File;
+    result: string;
 
     constructor(private router: Router, private formBuilder: FormBuilder, private uploadService: UploadFileService) {
         this.router = router;
@@ -75,18 +74,18 @@ export class BasicInfoComponent implements OnInit {
 
     // image  upload
 
-    onSelectFile(event) {
-        this.selectedFiles = event.target.files;
-        if (event.target.files && event.target.files[0]) {
-            const reader = new FileReader();
-
-            reader.readAsDataURL(event.target.files[0]); // read file as data url
-
-            reader.onload = (event) => { // called once readAsDataURL is completed
-                this.url = event.target.result;
-            }
-        }
-    }
+    // onSelectFile(event) {
+    //     this.selectedFiles = event.target.files;
+    //     if (event.target.files && event.target.files[0]) {
+    //         const reader = new FileReader();
+    //
+    //         reader.readAsDataURL(event.target.files[0]); // read file as data url
+    //
+    //         reader.onload = (event) => { // called once readAsDataURL is completed
+    //             this.url = event.target.result;
+    //         }
+    //     }
+    // }
 
 
 }
